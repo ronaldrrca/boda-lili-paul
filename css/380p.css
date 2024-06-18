@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: auto;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 150rem;
+}
+
+#encabezado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6.5rem;
+}
+
+#logo-100{
+    display: block;
+}
+
+#logo-200{
+    display: none;
+}
+
+#logo-250{
+    display: none;
+}
+
+.logo{
+    margin-bottom: 4rem;
+}
+
+#nombres-novios{
+    margin-bottom: 4rem;
+    font-size: 4rem;
+    font-family: "Pinyon Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#logo-100p{
+    display: block;    
+}
+
+#logo-215p{
+    display: none;    
+}
+
+#logo-250p{
+    display: none;    
+}
+
+
+
+
+

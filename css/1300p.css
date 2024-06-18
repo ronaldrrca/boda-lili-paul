@@ -1,0 +1,20 @@
+#logo-100{
+    display: none;
+}
+
+#logo-200{
+    display: none;
+}
+
+#logo-250{
+    display: block;
+}
+
+#nombres-novios{
+    font-size: 6rem;
+}
+
+#encabezado{
+    padding-top: 10rem;
+}
+
