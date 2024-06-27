@@ -10,6 +10,15 @@
     display: none;    
 }
 
+#fecha-boda{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.1rem;
+}
+
+#ciudad-boda{
+   font-size: 1.8rem;
+}
+
 
 
 

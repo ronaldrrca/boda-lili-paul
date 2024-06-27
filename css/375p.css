@@ -1,0 +1,154 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: auto;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 150rem;
+    margin: 0 auto;
+    padding-bottom: 50rem;
+}
+
+#encabezado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6.5rem;
+    margin-bottom: 6rem;
+}
+
+#contenido-general{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-100{
+    display: block;
+}
+
+#logo-200{
+    display: none;
+}
+
+#logo-250{
+    display: none;
+}
+
+.logo{
+    margin-bottom: 4rem;
+}
+
+#nombres-novios{
+    margin-bottom: 7rem;
+    font-size: 4rem;
+    /* font-family: "Pinyon Script", cursive;
+    font-weight: 400;
+    font-style: normal; */
+    user-select: none;
+}
+
+.cursiva-principal{
+    font-family: "Pinyon Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+}
+
+#logo-100p{
+    display: block;    
+}
+
+#logo-215p{
+    display: none;    
+}
+
+#logo-250p{
+    display: none;    
+}
+
+#foto-novios-pricipal{
+    width: auto;
+    max-width: 82.5rem;
+    margin-bottom: 4rem;
+}
+
+#linea-decoracion{
+    width: 0.3rem;
+    height: 8rem;
+    margin-bottom: 4rem;
+    background-color: #ccc;
+}
+
+#fecha-boda{
+    margin: 4rem 0 2rem 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+}
+
+#ciudad-boda{
+    margin-bottom: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+
+#cuenta-regresiva{
+    display: flex;
+    justify-content: space-around;
+    width: 21rem;
+    height: 6rem;
+    background-color: #BABAB9;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+
+.cuenta-regresiva-elemento{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: pink; */
+}
+
+.cuenta-regresiva-elementoSeparador{
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cuenta-regresiva-elemento .tiempo{
+    font-size: 1.2rem;
+}
+
+.cuenta-regresiva-elemento .texto{
+    font-size: 1rem;
+}
+
+.cuenta-regresiva-elemento .timpo, .cuenta-regresiva-elemento .texto, .cuenta-regresiva-elemento span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* background-color: aqua; */
+}

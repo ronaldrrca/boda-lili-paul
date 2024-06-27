@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lili & Paul</title>
-    <link rel="stylesheet" href="./css/380p.css" media="screen and (min-width: 380px)">
+    <link rel="stylesheet" href="./css/375p.css" media="screen and (min-width: 375px)">
     <link rel="stylesheet" href="./css/680p.css" media="screen and (min-width: 600px)">
     <link rel="stylesheet" href="./css/1300p.css" media="screen and (min-width: 1300px)">
     <link rel="stylesheet" href="./css/1880p.css" media="screen and (min-width: 1800px)">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <main>
@@ -18,15 +19,52 @@
             <img id="logo-100p" class="logo" src="./imagenes/logo-120p.png" alt="logo">
             <img id="logo-215p" class="logo" src="./imagenes/logo-215p.png" alt="logo">
             <img id="logo-250p" class="logo" src="./imagenes/logo-250p.png" alt="logo">
-            <span id="nombres-novios">Lili &nbsp;&nbsp; y &nbsp;&nbsp; Paul</span>
+            <span id="nombres-novios" class="cursiva-principal">Lili &nbsp;&nbsp; y &nbsp;&nbsp; Paul</span>
             <audio controls>
-                <source src="perfect.mp3" type="audio/mpeg">
+                <source src="la-boda.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
               </audio>
         </section>
-        
-        <div></div>
+        <div id="contenido-general">
+            <img id="foto-novios-pricipal" src="./imagenes//foto1.webp" alt="foto novios">
+            <div id="linea-decoracion"></div>
+            <span class="cursiva-principal" >Nuestra Boda</span>
+            <span id="fecha-boda">• 00 de Marzo de 2025 •</span>
+            <span id="ciudad-boda">Barranquilla, Atlántico</span>
+            <div id="cuenta-regresiva">
+                <div id="elemento-1" class="cuenta-regresiva-elemento">
+                    <span id="cuenta_regresiva_dias" class="tiempo"></span>
+                    <span class="texto">Dias</span>
+                </div>
+                <div id="elemento-2" class="cuenta-regresiva-elemento">
+                    <div class="cuenta-regresiva-elementoSeparador">:</div>
+                    <div class="cuenta-regresiva-elementoSeparador"></div>
+                </div>
+                <div id="elemento-3" class="cuenta-regresiva-elemento">
+                    <span id="cuenta_regresiva_horas" class="tiempo"></span>
+                    <span class="texto">Horas</span>
+                </div>
+                <div id="elemento-4" class="cuenta-regresiva-elemento">
+                    <div class="cuenta-regresiva-elementoSeparador">:</div>
+                    <div class="cuenta-regresiva-elementoSeparador"></div>
+                </div>
+                <div id="elemento-5" class="cuenta-regresiva-elemento">
+                    <span id="cuenta_regresiva_minutos" class="tiempo"></span>
+                    <span class="texto">Min</span>
+                </div>
+                <div id="elemento-6" class="cuenta-regresiva-elemento">
+                    <div class="cuenta-regresiva-elementoSeparador">:</div>
+                    <div class="cuenta-regresiva-elementoSeparador"></div>
+                </div>
+                <div id="elemento-7" class="cuenta-regresiva-elemento">
+                    <span id="cuenta_regresiva_segundos" class="tiempo"></span>
+                    <span class="texto">Seg</span>
+                </div>
+
+            </div>
+        </div>
     </main>
     <footer></footer>
+    <script src="app.js"></script>
 </body>
 </html>
