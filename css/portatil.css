@@ -1,3 +1,33 @@
+main{
+    padding-top: 10rem;
+}
+
 .main__fixedImage{
     width: 20%;
 }
+
+.main__fixedImage__right{
+    top: 45rem;
+}
+
+.presentacion__logoNovios{
+    width: 22rem;
+}
+
+.presentacion__nombresNovios{
+    margin-top: 5rem;
+    font-size: 6rem;
+}
+
+.presentacion__reproductorDeAudio{
+    margin-top: 5rem;
+    width: 30rem;
+    height: 5rem;
+}
+
+.presentacion__imagenPrincipal{
+    max-width: 80rem;
+    width: 100%;
+    margin-top: 10rem;
+}
+
