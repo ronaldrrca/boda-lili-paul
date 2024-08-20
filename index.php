@@ -12,6 +12,8 @@
 <body>
     <header></header>
     <main>
+        <img class="main__fixedImage main__fixedImage__left" src="./assets/rama_de_flores_left.png" alt="rama de flores">
+        <img class="main__fixedImage main__fixedImage__right" src="./assets/rama_de_flores_right.png" alt="rama de flores">
         <section class="seccion presentacion"></section>
         <section class="seccion informacion"></section>
         <section class="seccion detalles"></section>
