@@ -31,3 +31,27 @@ main{
     margin-top: 10rem;
 }
 
+.detalles__citaBiblica{
+    padding-left: 20rem;
+    padding-right: 20rem;
+}
+
+.detalles__iconoImagen, .informacion__iconoImagen{
+    width: 12rem;
+}
+
+.detalles__bendicion{
+    gap: 15rem;
+}
+
+.detalles_nosCasamos{
+    font-size: 5rem;
+}
+
+.detalles__slider{
+    width: 100%;
+}
+
+
+
+

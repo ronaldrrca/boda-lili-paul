@@ -1,4 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');/*Nombres de los novios*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');/*Títulos*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');/*Texto general*/
+
+:root{
+    --fuente_titulos: "Josefin Slab", serif; 
+    --fuente_texto_general: "Open Sans", sans-serif; 
+}
 
 *{
     margin: 0;
@@ -26,9 +33,11 @@ main{
     max-width: 1600px;
     position: relative;
     padding-top: 5rem;
+    
 }
 
 .seccion{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,4 +82,168 @@ main{
 .presentacion__imagenPrincipal{
     width: 100%;
     margin-top: 2.5rem;
+}
+
+.detalles__citaBiblica{
+    width: 100%;
+    margin-top: 10rem;
+    padding: 2rem 1.5rem;
+    background-color: #C89084;
+    font-family: var(--fuente_texto_general);
+    font-optical-sizing: auto;
+    text-align: center;
+    color: #413F2F;
+}
+
+.detalles__citaBiblica__versiculo{
+    font-weight: 100;
+    font-style: italic;
+    font-size: 1.6rem;
+}
+
+.detalles__citaBiblica__cita{
+    display: inline-block;
+    margin-top: 2rem;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4rem;
+}
+
+.detalles__iconoImagen, .informacion__iconoImagen{
+    width: 8rem;
+    margin-top: 8rem;
+}
+
+.detalles h2{
+    margin-top: 3rem;
+    font-family: var(--fuente_titulos);
+    font-size: 2rem;
+    text-align: center;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.detalles__bendicion{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.detalles__bendicion__padresNovia, .detalles__bendicion__padresNovio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--fuente_texto_general);
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 100;
+}
+
+.detalles__bendicion__padresNovia .detalles__bendicion__novia, .detalles__bendicion__padresNovio .detalles__bendicion__novio{
+    font-size: 1.6rem;
+}
+
+.detalles__bendicion__cruzPostuma{
+    width: 1.5rem;
+}
+
+.detalles_nosCasamos{
+    margin-top: 10rem;
+    font-family: var(--fuente_titulos);
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.detalles__fechaLugar__fecha{
+    margin-top: 3rem;
+}
+
+
+.detalles__fechaLugar__fecha, .detalles__fechaLugar__lugar{
+    font-family: var(--fuente_texto_general);
+    font-size: 2rem;
+    line-height: 3.5rem;
+    font-style: normal;
+    font-weight: 100;
+}
+
+.detalles__cuentaRegresiva{
+    display: flex;
+    flex-direction: column;
+    width: 31rem;
+    padding: 1rem 2rem;
+    gap: 2rem;
+    border-radius: 10px;
+    margin-top: 3rem;
+    background-color: #9DBEA5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.detalles__cuentaRegresiva__tiempo, .detalles__cuentaRegresiva__descripcion{
+    display: flex;
+    justify-content: space-between;
+}
+
+.detalles__cuentaRegresiva__tiempo{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.detalles__cuentaRegresiva__descripcion{
+    font-size: 1.3rem;
+    font-weight: 100;
+    color: #fff;
+}
+
+.detalles__cuentaRegresiva__tiempo .tiempo{
+    background-color: #DCE8D4;
+    width: 4.5rem;
+    height: 4.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: #4A6A59;
+}
+
+.detalles__cuentaRegresiva__item{
+    width: 4.5rem;
+    text-align: center;
+}
+
+.detalles__cuentaRegresiva__relleno{
+    color: #9DBEA5;
+}
+
+.detalles__slider{
+    width: 100%;
+    max-width: 80rem;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10rem;
+}
+
+.detalles__slider__flecha{
+    position: absolute;
+    width: 4rem;
+    top: calc(50% - 2rem);
+    z-index: 200;
+}
+
+#detalles__slider__flechaAvanzar{
+    right: 2rem;
+    transform: rotate(180deg);
+}
+
+#detalles__slider__flechaRetroceder{
+    left: 2rem;
+}
+
+.detalles__slider__foto{
+    width: 100%;
 }
