@@ -11,6 +11,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: none;
 }
 
 html{
@@ -33,7 +34,15 @@ main{
     max-width: 1600px;
     position: relative;
     padding-top: 5rem;
-    
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    margin-top: 15rem;
+    background-color: #EDE8E3;
 }
 
 .seccion{
@@ -88,7 +97,7 @@ main{
     width: 100%;
     margin-top: 10rem;
     padding: 2rem 1.5rem;
-    background-color: #C89084;
+    background-color: #EDE8E3;
     font-family: var(--fuente_texto_general);
     font-optical-sizing: auto;
     text-align: center;
@@ -247,3 +256,172 @@ main{
 .detalles__slider__foto{
     width: 100%;
 }
+
+.informacion__momentos{
+    width: 100%;
+    max-width: 80rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.informacion__momentos__ceremonia, .informacion__momentos__celebracion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.informacion__momentos , .informacion__vestimenta h2, .informacion__asistencia h2{
+    margin-top: 3rem;
+    font-family: var(--fuente_titulos);
+    font-size: 2.5rem;
+    text-align: center;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.informacion__momentos span, .informacion__vestimenta span{
+    font-family: var(--fuente_texto_general);
+    font-size: 1.6rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+.informacion__momentos__mapa{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    margin-top: 3rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: transform 0.3s ease;
+}
+
+iframe{
+    width: 100%;
+    max-width: 25rem;
+    height: min-content;
+}
+
+.informacion__regalos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 38rem;
+    margin-top: 15rem;
+    padding: 3rem;
+    border-radius: 10px;
+    background-color: #EDE8E3;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.informacion__regalos p{
+    margin-top: 3rem;
+    font-family: var(--fuente_texto_general);
+    font-style: italic;
+    font-size: 1.6rem;
+    color: #413F2F;
+}
+
+.regalos__iconoImagen{
+    width: 8rem;
+    
+}
+
+.informacion__vestimenta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.informacion__asistencia{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.informacion__asistencia .asistencia__datos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.informacion__asistencia__formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 38rem;
+    gap: 0.5rem;
+    margin-top: 3rem;
+}
+
+.informacion__asistencia__formulario select{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #EDE8E3;
+    font-size: 1.4rem;
+    font-family: var(--fuente_texto_general);
+    
+}
+
+.informacion__asistencia__formulario input[type="text"],
+.informacion__asistencia__formulario input[type="tel"]{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #EDE8E3;
+    font-size: 1.4rem;
+    font-family: var(--fuente_texto_general);
+    
+}
+
+textarea{
+    resize: none;
+    width: 100%;
+    height: 15rem;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #EDE8E3;
+    font-size: 1.4rem;
+    font-family: var(--fuente_texto_general);
+}
+
+.informacion__asistencia input[type="submit"]{
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    background-color: #218838;
+    font-family: var(--fuente_texto_general);
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer__iconos{
+    width: 3.2rem;
+}
+
+.footer__links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.footer__desarrollador, .footer__web{
+    font-family: var(--fuente_texto_general);
+    font-size: 1.8rem;
+}
+
+
+
+

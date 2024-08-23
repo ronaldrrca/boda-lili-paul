@@ -52,6 +52,24 @@ main{
     width: 100%;
 }
 
+.informacion__momentos span{
+    font-size: 2rem;
+}
+
+.informacion__momentos{
+    gap: 10rem;
+}
+
+.informacion__momentos__mapa:hover{
+    transform: scale(1.1);
+}
+
+.informacion__asistencia input[type="submit"]:hover{
+    opacity: 0.9;
+}
+
+
+
 
 
 

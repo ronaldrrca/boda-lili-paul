@@ -52,3 +52,35 @@ main{
     width: 80%;
 }
 
+.informacion__momentos h2{
+    font-size: 3rem;
+}
+
+.informacion__momentos{
+    flex-direction: row;
+    gap: 6rem;
+}
+
+.informacion__momentos .informacion__momentos__lugar{
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.informacion__momentos__ceremonia, .informacion__momentos__celebracion{
+    width: 50%;
+}
+
+.informacion__regalos, .informacion__asistencia__formulario{
+    max-width: 50rem;
+}
+
+.informacion__asistencia .asistencia__datos{
+    flex-direction: row;
+}
+
+.informacion__asistencia__formulario input[type="text"],
+.informacion__asistencia__formulario input[type="tel"]{
+    width: 50%;
+}
