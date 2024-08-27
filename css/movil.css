@@ -120,7 +120,7 @@ footer{
 
 .detalles__iconoImagen, .informacion__iconoImagen{
     width: 8rem;
-    margin-top: 8rem;
+    margin-top: 12rem;
 }
 
 .detalles h2{
@@ -262,22 +262,48 @@ footer{
     max-width: 80rem;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .informacion__momentos__ceremonia, .informacion__momentos__celebracion{
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
+}
+
+.informacion__momentos__frase{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 1.5rem;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    font-family: var(--fuente_texto_general);
+    font-style: italic;
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.informacion__momentos__frase span{
+    width: 100%;
+    max-width: 50rem;
+    text-align: center;
     
 }
 
-.informacion__momentos , .informacion__vestimenta h2, .informacion__asistencia h2{
+.informacion__momentos, .informacion__vestimenta h2, .informacion__asistencia h2{
     margin-top: 3rem;
     font-family: var(--fuente_titulos);
     font-size: 2.5rem;
     text-align: center;
     font-style: italic;
     font-weight: 600;
+}
+
+#informacion__momentos{
+    margin-top: 10rem;
 }
 
 .informacion__momentos span, .informacion__vestimenta span{
@@ -342,7 +368,9 @@ iframe{
     flex-direction: column;
     align-items: center;
     margin-top: 10rem;
+    position: relative;
 }
+
 
 .informacion__asistencia .asistencia__datos{
     width: 100%;
@@ -402,6 +430,13 @@ textarea{
     color: #FFFFFF;
     border-radius: 5px;
     cursor: pointer;
+}
+
+#informacion__asistencia__agradecimiento{/*ajustando el posicionamiento del mensaje de agradecimiento por confirmaión*/
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .footer__iconos{
