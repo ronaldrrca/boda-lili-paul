@@ -9,7 +9,7 @@ let detalles__cuentaRegresiva__dias = document.getElementById("detalles__cuentaR
 let detalles__cuentaRegresiva__horas = document.getElementById("detalles__cuentaRegresiva__horas");
 let detalles__cuentaRegresiva__minutos = document.getElementById("detalles__cuentaRegresiva__minutos");
 let detalles__cuentaRegresiva__segundos = document.getElementById("detalles__cuentaRegresiva__segundos");
-const fechaBoda = new Date(2025, 2, 30, 17, 0, 0);// Fecha de la boda
+const fechaBoda = new Date(2025, 2, 15, 17, 0, 0);// Fecha de la boda
 
 
 //________________Código del slider de imágenes______________________________________________________________
@@ -88,6 +88,8 @@ setInterval(function() {
   form.addEventListener('submit', e => {
     e.preventDefault();
 
+    document.getElementById("loader").style.display = "block";
+
     // Obtener la fecha y hora actuales
     const now = new Date();
     
@@ -98,17 +100,47 @@ setInterval(function() {
     const hours = String(now.getHours()).padStart(2, '0');
     const minutes = String(now.getMinutes()).padStart(2, '0');
     const seconds = String(now.getSeconds()).padStart(2, '0');
-
     const formattedTimestamp = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
 
     // Establecer el valor del campo oculto
     document.getElementById('timestamp').value = formattedTimestamp;
 
+    function limpiarFormulario() {
+        document.getElementById("Nombres").value = "";
+        // document.getElementById("Nombres").setAttribute("disabled", "true");
+        document.getElementById("Telefono").value = "";
+        // document.getElementById("Telefono").setAttribute("disabled", "true");
+        document.getElementById("Asistencia").value = "";
+        // document.getElementById("Asistencia").setAttribute("disabled", "true");
+        document.getElementById("Mensaje").value = "";
+        // document.getElementById("Mensaje").setAttribute("disabled", "true");
+    }
+
+    //Se cierra el mensaje de agradecimiento después de enviar el formulario de confirmación
+    document.getElementById("acceptButton").addEventListener("click", ()=>{
+        document.getElementById('informacion__contenedor__agradecimiento').style.display = "none";
+    })
+
     //Enviar formulario 
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => response.json())
-      .then(result => console.log('Éxito:', result))
-      .catch(error => console.error('Error:', error.message));
+      .then(result => 
+        {
+            console.log('Éxito:', result)
+            document.getElementById('informacion__contenedor__agradecimiento').style.display = "flex";//Se muestra un mensaje de agradecimiento
+            document.getElementById("Asistencia").value === "si" ? document.getElementById("informacion__asistencia__respuesta").innerHTML = "¡Gracias por confirmar tu asistencia! <br> Estamos emocionados de verte en la boda." : document.getElementById("informacion__asistencia__respuesta").innerHTML = "Lamentamos que no puedas asistir. <br> ¡Gracias por hacérnoslo saber!" 
+            limpiarFormulario();   
+            document.getElementById("loader").style.display = "none";        
+        }
+        
+      )
+      .catch(error => {
+        console.error('Error:', error.message);
+        document.getElementById("loader").style.display = "none";  
+        limpiarFormulario();
+        document.getElementById('informacion__contenedor__agradecimiento').style.display = "flex";
+        document.getElementById("informacion__asistencia__respuesta").innerHTML = "Ocurrió un error, póngase en contacto con el propietario de la página";
+      })
   });
 
 

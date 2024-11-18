@@ -1,0 +1,4 @@
+- Decidir la fuente del logo y el color del corazón.
+- Desarrollar los modelos para la fecha para que la novia decida. ***DONE*** 
+- Aclarar lo del tamaño de la frase "Nos casamos". ***DONE***
+- Cambiar los mapas por un botón que diga "ver ubicación". ***DONE***

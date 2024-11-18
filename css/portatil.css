@@ -60,12 +60,14 @@ main{
     gap: 10rem;
 }
 
-.informacion__momentos__mapa:hover{
-    transform: scale(1.1);
+.informacion__asistencia input[type="submit"]:hover, #acceptButton:hover, .informacion__momentos__verUbicacion:hover{
+    opacity: 0.9;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.informacion__asistencia input[type="submit"]:hover{
-    opacity: 0.9;
+.temporal_mostrarModelosFechas{
+    flex-direction: row;
+    
 }
 
 

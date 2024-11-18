@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');/*Nombres de los novios*/
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');/*Títulos*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');/*Texto general*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');/*Cursiva para otros detalles*/
 
 :root{
     --fuente_titulos: "Josefin Slab", serif; 
@@ -75,7 +76,7 @@ footer{
 
 .presentacion__nombresNovios{
     margin-top: 2.5rem;
-    font-family: "Allura", cursive;
+    font-family: "Great Vibes", cursive;
     font-size: 4rem;
     font-weight: 400;
     font-style: normal;
@@ -166,7 +167,7 @@ footer{
     font-weight: 600;
 }
 
-.detalles__fechaLugar__fecha{
+/* .detalles__fechaLugar__fecha{
     margin-top: 3rem;
 }
 
@@ -177,6 +178,165 @@ footer{
     line-height: 3.5rem;
     font-style: normal;
     font-weight: 100;
+} */
+
+.temporal_mostrarModelosFechas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+}
+
+.detalles__fechaLugar__modelo1, .detalles__fechaLugar__modelo2,.detalles__fechaLugar__modelo3{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .detalles__fechaLugar__modelo1{
+    display: none;
+} 
+
+.detalles__fechaLugar__modelo2{
+    display: none;
+}  */
+
+.detalles__fechaLugar__modelo1_diaSemana, .detalles__fechaLugar__modelo1_diaMes, .detalles__fechaLugar__modelo1_mes, .detalles__fechaLugar__modelo1_anio{
+    display: flex;
+    margin: 0;
+}
+
+.detalles__fechaLugar__modelo1_diaSemana{
+    font-size: 3rem;
+    font-family: var(--fuente_texto_general);
+    font-weight: 400;
+    height: 3rem;
+    /* margin-bottom: 2rem; */
+}
+
+.detalles__fechaLugar__modelo1_diaMes{
+    font-size: 8rem;
+    font-weight: 600;
+    font-family:  var(--fuente_texto_general);
+    font-style: normal;
+    height: 8rem;
+}
+
+.detalles__fechaLugar__modelo1_anio{
+    font-size: 2rem;
+    font-weight: 600;
+    font-family:  var(--fuente_texto_general);
+    font-style: normal;
+    margin-top: 1rem;
+}
+
+.detalles__fechaLugar__modelo1_mes{
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 5rem;
+  height: 5rem;
+  margin-top: 1rem;
+}
+
+.detalles__fechaLugar__modelo1_lineaHorizontalSuperior, .detalles__fechaLugar__modelo1_lineaHorizontalInferior{
+    width: 13rem;
+    height: 0.2rem;
+    background-color: #333333;
+}   
+
+.detalles__fechaLugar__modelo1_lineaHorizontalSuperior{
+    margin-bottom: 1rem;
+}
+
+.detalles__fechaLugar__modelo1_lineaHorizontalInferior{
+    margin-top: 1rem;
+}
+
+.detalles__fechaLugar__modelo2_info{
+    display: flex;
+    gap: 1rem;
+    justify-content: baseline;
+    align-items: center;
+    font-family: var(--fuente_texto_general);
+    font-size: 4rem;
+
+}
+
+.detalles__fechaLugar__modelo2_mes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    /* letter-spacing: 1rem; */
+    text-align: center;
+}
+
+.detalles__fechaLugar__modelo2_diaSemana, .detalles__fechaLugar__modelo2_anio{
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc ;
+    width: 10rem;
+    font-size: 2.2rem;
+    text-align: center;
+    padding: 1.3rem 0;
+}
+
+.detalles__fechaLugar__modelo2_diaMes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.detalles__fechaLugar__modelo3{
+    gap: 1rem;
+}
+
+.detalles__fechaLugar__modelo3_diaSemana, .detalles__fechaLugar__modelo3_diaMes, .detalles__fechaLugar__modelo3_mes, .detalles__fechaLugar__modelo3_anio{
+    display: flex;
+    margin: 0;
+}
+
+.detalles__fechaLugar__modelo3_diaSemana{
+    font-size: 4rem;
+    font-family: var(--fuente_titulos);
+    font-weight: 600;
+    line-height: 3rem;
+    height: 3rem;
+}
+
+.detalles__fechaLugar__modelo3_mes{
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+    height: 5rem;
+    /* margin-top: 1rem; */
+}
+
+.detalles__fechaLugar__modelo3_diaMes{
+    font-size: 10rem;
+    font-family: var(--fuente_titulos);
+    font-weight: 600;
+    line-height: 8rem;
+    height: 6rem;
+}
+
+.detalles__fechaLugar__modelo3_anio{
+    font-family: var(--fuente_titulos);
+    font-size: 2.5rem;
+    letter-spacing: 1.5rem; 
+    font-weight: 600;
+}
+
+.detalles__fechaLugar__modelo3_anio::before{
+    content: '';
+    width: 1.5rem;
 }
 
 .detalles__cuentaRegresiva{
@@ -184,11 +344,18 @@ footer{
     flex-direction: column;
     width: 31rem;
     padding: 1rem 2rem;
-    gap: 2rem;
+    gap: 1rem;
     border-radius: 10px;
-    margin-top: 3rem;
+    margin-top: 1rem;
     background-color: #9DBEA5;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.detalles__cuentaRegresiva__faltan{
+    font-family: var(--fuente_titulos);
+    font-size: 2.2rem;
+    margin-top: 5rem;
+    font-weight: 600;
 }
 
 .detalles__cuentaRegresiva__tiempo, .detalles__cuentaRegresiva__descripcion{
@@ -313,21 +480,16 @@ footer{
     text-align: center;
 }
 
-.informacion__momentos__mapa{
-    height: auto;
-    display: flex;
-    justify-content: center;
-    padding: 5px;
-    margin-top: 3rem;
+.informacion__momentos__verUbicacion{
+    text-decoration: none;
+    display: block;
+    background-color: #333333;
+    padding: 1rem 2rem;
     border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: transform 0.3s ease;
-}
-
-iframe{
-    width: 100%;
-    max-width: 25rem;
-    height: min-content;
+    margin-top: 3rem;
+    transition: all 0.3s;
+    font-size: 2rem;
+    color: #fff;
 }
 
 .informacion__regalos{
@@ -344,6 +506,7 @@ iframe{
 }
 
 .informacion__regalos p{
+    text-align: center;
     margin-top: 3rem;
     font-family: var(--fuente_texto_general);
     font-style: italic;
@@ -424,20 +587,76 @@ textarea{
 .informacion__asistencia input[type="submit"]{
     padding: 1rem 2rem;
     margin-top: 1rem;
-    background-color: #218838;
+    background-color: #333333;
     font-family: var(--fuente_texto_general);
     font-size: 1.6rem;
     color: #FFFFFF;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.3s;
 }
 
-#informacion__asistencia__agradecimiento{/*ajustando el posicionamiento del mensaje de agradecimiento por confirmaión*/
+#informacion__contenedor__agradecimiento{
+    width: 100%;
+    height: 100%;
     display: none;
-    position: absolute;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
     top: 0;
     left: 0;
+    background-color: rgba(51, 51, 51, 0.5);
+        
 }
+
+#informacion__asistencia__agradecimiento{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 35rem;
+    height: 15rem;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: 1.6rem;
+    font-family: var(--fuente_texto_general);
+    font-weight: 100;
+    z-index: 400;
+    
+}
+
+#informacion__asistencia__respuesta{
+    text-align: center;
+}
+
+#acceptButton{
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    background-color: #333333;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.loader {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: calc(50% - 30px);
+    border: 8px solid #f3f3f3; /* Color de fondo */
+    border-top: 8px solid #3498db; /* Color de la parte giratoria */
+    border-radius: 50%; /* Hace que el div sea un círculo */
+    width: 6rem;
+    height: 6rem;
+    animation: spin 1s linear infinite; /* Animación de giro */
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 
 .footer__iconos{
     width: 3.2rem;

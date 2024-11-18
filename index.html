@@ -15,7 +15,7 @@
         <img class="main__fixedImage main__fixedImage__left" src="./assets/rama_de_flores_left.png" alt="rama de flores">
         <img class="main__fixedImage main__fixedImage__right" src="./assets/rama_de_flores_right.png" alt="rama de flores">
         <section class="seccion presentacion">
-            <img class="presentacion__logoNovios" src="./assets/logo.png" alt="logo de las iniciales de los novios entrelazadas con un corazon">
+            <img class="presentacion__logoNovios" src="./assets/logo-rosa-palo-D7AFA8.png" alt="logo de las iniciales de los novios entrelazadas con un corazon">
             <h1 class="presentacion__nombresNovios">Lilibeth y Paul</h1>
             <audio class="presentacion__reproductorDeAudio" controls loop>
                 <source src="./assets/la-boda.mp3" type="audio/mpeg">
@@ -46,9 +46,17 @@
                 </div>
             </div>
             <span class="detalles_nosCasamos">Nos casamos</span>
-            <span class="detalles__fechaLugar__fecha">30 de Marzo de 2025</span>
-            <span class="detalles__fechaLugar__lugar">Barranquilla, Atlántico</span>
-            <span>Faltan</span><!--Estilizar-->
+            <!-- <span class="detalles__fechaLugar__fecha">30 de Marzo de 2025</span>
+            <span class="detalles__fechaLugar__lugar">Barranquilla, Atlántico</span> -->
+            <div class="temporal_mostrarModelosFechas">
+                <div class="detalles__fechaLugar__modelo3">
+                    <span class="detalles__fechaLugar__modelo3_diaSemana">SÁB</span>
+                    <span class="detalles__fechaLugar__modelo3_diaMes">15</span>
+                    <span class="detalles__fechaLugar__modelo3_mes">Marzo</span>
+                    <span class="detalles__fechaLugar__modelo3_anio">2025</span>
+                </div>
+            </div>
+            <span class="detalles__cuentaRegresiva__faltan">Faltan</span><!--Estilizar-->
             <div class="detalles__cuentaRegresiva">
                 <div class="detalles__cuentaRegresiva__tiempo">
                     <span id="detalles__cuentaRegresiva__dias" class="tiempo">000</span><span>:</span>
@@ -76,17 +84,15 @@
                     <img class="informacion__iconoImagen" src="./assets/iglesia.svg" alt="iglesia">
                     <h2>Ceremonia</h2>
                     <span>6:00pm</span>
-                    <span class="informacion__momentos__lugar">Catedral Metropolitana <br>de Barranquilla</span>
-                    <div class="informacion__momentos__mapa"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.670202760637!2d-74.79265042630101!3d10.988246855253674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d65339eb257%3A0x9d19c0493a92c4fe!2sCATEDRAL%20METROPOLITANA%20MAR%C3%8DA%20REINA%20Y%20AUXILIADORA%20DE%20BARRANQUILLA!5e0!3m2!1ses-419!2sco!4v1723756831333!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                    <span class="informacion__momentos__lugar">Catedral Maria Reina<br>Barranquilla</span>
+                    <a href="https://maps.app.goo.gl/Cw2vB432xTBCbWi87" class="informacion__momentos__verUbicacion" target="_blank">Ver ubicación</a>
                 </div>
                 <div class="informacion__momentos__celebracion">
                     <img class="informacion__iconoImagen" src="./assets/copas.svg" alt="copas de brindis">
                     <h2>Celebración</h2>
                     <span>8:00pm</span>
                     <span class="informacion__momentos__lugar">Salón de Eventos Dayder<br>Calle 76 # 44 - 45</span>
-                    <div class="informacion__momentos__mapa">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.5694033595023!2d-74.81340822630087!3d10.995838555111034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d094f69aa2f%3A0x7adc5f0edd878416!2sSALON%20DE%20EVENTOS%20DAYDER!5e0!3m2!1ses-419!2sco!4v1724703562555!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
+                    <a href="https://maps.app.goo.gl/KorYaWTijcLFyKWE8" class="informacion__momentos__verUbicacion" target="_blank">Ver ubicación</a>
                 </div>
             </div>
             <div class="informacion__regalos">
@@ -111,13 +117,10 @@
                         <option value="no">No</option>
                     </select>
                     <textarea id="Mensaje" maxlength="300" cols="6" name="Mensaje" required placeholder="Mensaje para los novios"></textarea>
-                    <!-- Campo oculto para la fecha y hora -->
+                    <!-- Campo oculto para la fecha y hora que se envían al formulario-->
                     <input type="hidden" id="timestamp" name="FechaHora">
-                    <input type="submit" value="Enviar confirmación">
+                    <input type="submit" id="submit" value="Enviar confirmación">
                 </form>
-                <div id="informacion__asistencia__agradecimiento">
-                    <span>Gracias por tu confirmación</span>
-                </div>
             </div>
         </section>
     </main>
@@ -128,6 +131,13 @@
             <a href="https://www.instagram.com/codews.co?igsh=cmRjeTNwazljcmV4"><img class="footer__iconos" src="./assets/instagram.ico" alt="logo instagram"></a>
         </div>
     </footer>
+    <div id="informacion__contenedor__agradecimiento">
+        <div id="informacion__asistencia__agradecimiento">
+            <span id="informacion__asistencia__respuesta"></span>
+            <button id="acceptButton">Aceptar</button>
+        </div>
+    </div>
+    <div id="loader" class="loader"></div>
     <script src="./app.js"></script>
 </body>
 </html>
