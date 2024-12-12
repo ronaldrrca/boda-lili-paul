@@ -1,32 +1,66 @@
-{
-    "def456uvw": {
-        "nombres": {
-            "María Gómez": false,
-            "Celia Campillo": true
-        },
-        "confirmado": true,
-        "fecha": "30\/11\/2024",
-        "telefono": "300 123 45 67",
+[
+    {
+        "token": "abc123cba",
+        "invitados": [
+            {
+                "nombre": "Ronald Rodríguez",
+                "confirmacion": true
+            },
+            {
+                "nombre": "Celia Campillo",
+                "confirmacion": true
+            },
+            {
+                "nombre": "Marianna García",
+                "confirmacion": false
+            }
+        ],
+        "fecha_confirmacion": "12/12/2024 15:19:06",
+        "telefono": "3003581311",
+        "mensaje": "erwef"
+    },
+    {
+        "token": "def456fed",
+        "invitados": [
+            {
+                "nombre": "Brigitte Morris",
+                "confirmacion": false
+            },
+            {
+                "nombre": "Diego Royero",
+                "confirmacion": false
+            }
+        ],
+        "fecha_confirmacion": "",
+        "telefono": "",
         "mensaje": ""
     },
-    "abc123xyz": {
-        "nombres": [
-            "Juan Pérez"
+    {
+        "token": "ghi789ihg",
+        "invitados": [
+            {
+                "nombre": "Fulanito de Tal",
+                "confirmacion": false
+            }
         ],
-        "confirmado": false,
-        "fecha": "29\/11\/2024 17:48:40",
-        "telefono": "3007428335",
+        "fecha_confirmacion": "",
+        "telefono": "",
         "mensaje": ""
     },
-    "ghi789rst": {
-        "nombres": [
-            "Marco Ayala",
-            "Ronald Rafael Rodríguez Campillo Campillo xampillo",
-            "Denis Ortiz"
+    {
+        "token": "jkl012lkj",
+        "invitados": [
+            {
+                "nombre": "Pedro Álvarez",
+                "confirmacion": true
+            },
+            {
+                "nombre": "Peter Parker",
+                "confirmacion": false
+            }
         ],
-        "confirmado": false,
-        "fecha": "29\/11\/2024",
-        "telefono": "300 987 65 43",
+        "fecha_confirmacion": "",
+        "telefono": "",
         "mensaje": ""
     }
-}
+]

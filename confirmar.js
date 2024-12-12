@@ -58,52 +58,46 @@ fetch(invitados)
     return response.json(); // Convertir la respuesta a JSON
   })
   .then(data => {
-    let infoInvitado = data[token];
+    let infoInvitado = data.find(item => item.token === token);
     
+    
+       
     //Validando el token
     document.getElementById("confirmButtom").addEventListener("click", ()=>{
+      // Filtrar los invitados que tienen confirmación === true
+      let invitadosConfirmados = infoInvitado.invitados.filter(invitado => invitado.confirmacion === false);
+
       if (!infoInvitado) {
         document.getElementById("informacion__contenedor__agradecimiento").style.display = "flex";
         document.getElementById("informacion__asistencia__respuesta").innerHTML = "Token inválido, póngase en contacto con los novios";
         throw new Error(`El token "${token}" no existe en el JSON.`);
-      }else if (infoInvitado.confirmado === true) {
+      }else if (invitadosConfirmados.length === 0) {
         document.getElementById("informacion__contenedor__agradecimiento").style.display = "flex";
         document.getElementById("informacion__asistencia__respuesta").innerHTML = "Ya habías confirmado";
-      }else if(infoInvitado.confirmado === false){
+      }else if(invitadosConfirmados.length > 0){
         //Validando y mostrando los invitados
-        console.log(infoInvitado);
+        console.log(invitadosConfirmados);
         
-        
-       
-        // nombreInvitado.setAttribute("id", "Nombres");
-        let nombresInvitados = "";
-        let numeroInvitado = 1;
-        
-        for (const nombre in infoInvitado.nombres) {
-          console.log(`${infoInvitado.nombres[nombre]}`);
+        invitadosConfirmados.forEach((element, index) => {
+          console.log(element.nombre);
 
           let asistencia__datos = document.getElementById("asistencia__datos");
           const invitado = document.createElement("div");
-          invitado.setAttribute("id", "invitado");
+          invitado.setAttribute("id", `invitado_${index + 1}`);
           const checkInvitado = document.createElement("input");
           checkInvitado.type = "checkbox";
-          checkInvitado.setAttribute("name", `${infoInvitado.nombres[nombre]}`);
+          checkInvitado.setAttribute("name", `${element.nombre}`);
           const nombreInvitado = document.createElement("span");
           nombreInvitado.classList.add("nombreInvitado")
           
-
           asistencia__datos.appendChild(invitado);
           invitado.appendChild(nombreInvitado);
           invitado.appendChild(checkInvitado);
-          nombreInvitado.innerHTML = infoInvitado.nombres[nombre];
-
-
-          // nombresInvitados += " " + numeroInvitado + ". " + `${infoInvitado.nombres[nombre]} \n`;
-          // numeroInvitado++;
+          nombreInvitado.innerHTML = `${index + 1}. ${element.nombre}`;
           
-          // nombreInvitado.innerHTML = nombresInvitados;
-          // asistencia__datos.insertBefore(nombreInvitado, asistencia__datos.firstChild);
-        }
+        });
+        
+        
         document.getElementById("informacion__asistencia").style.display = "flex";  
         document.body.style.overflow = 'hidden';
     }
@@ -171,7 +165,7 @@ form.addEventListener('submit', e => {
   document.getElementById("loader").style.display = "none"; 
         document.getElementById("informacion__asistencia").style.display = "none";
         document.getElementById('informacion__contenedor__agradecimiento').style.display = "flex";//Se muestra un mensaje de agradecimiento
-        document.getElementById("Asistencia").value === "si" ? document.getElementById("informacion__asistencia__respuesta").innerHTML = 
+        document.getElementById("asistencia").value === "si" ? document.getElementById("informacion__asistencia__respuesta").innerHTML = 
           "¡Gracias por confirmar tu asistencia! <br> Estamos emocionados de verte en la boda." : document.getElementById("informacion__asistencia__respuesta").innerHTML = 
           "Lamentamos que no puedas asistir. <br> ¡Gracias por hacérnoslo saber!" 
         limpiarFormulario();   

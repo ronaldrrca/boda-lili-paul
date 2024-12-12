@@ -124,17 +124,17 @@
             <div id="informacion__asistencia" class="informacion__asistencia">
                     <form id="myForm" class="informacion__asistencia__formulario" action="./confirmar.php" method="POST">
                         <!-- Campo oculto para la fecha y hora que se envían al formulario-->
-                    <input type="hidden" id="timestamp" name="FechaHora" value="">
+                    <input type="hidden" id="timestamp" name="fechaHora" value="">
                     <input type="hidden" name="token" id="token" value="">
                     <span>Nos complace invitar a:</span>
                     <div id="asistencia__datos" class="asistencia__datos"></div>
-                    <input type="tel" name="Telefono" id="Telefono" required placeholder="Teléfono">
-                    <select name="Asistencia" id="Asistencia" required>
+                    <input type="tel" name="telefono" id="telefono" required placeholder="Teléfono">
+                    <select name="asistencia" id="asistencia" required>
                         <option value="" selected disabled>Confirmación</option>
                         <option value="si">Sí, allí estaré</option>
                         <option value="no">No</option>
                     </select>
-                    <textarea id="Mensaje" maxlength="300" cols="6" name="Mensaje" required placeholder="Mensaje para los novios"></textarea>
+                    <textarea id="Mensaje" maxlength="300" cols="6" name="mensaje" required placeholder="Mensaje para los novios"></textarea>
                     
                     <div id="formulario_botones">
                         <input type="submit" id="submit" value="Enviar confirmación">
