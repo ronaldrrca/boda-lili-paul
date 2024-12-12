@@ -20,6 +20,7 @@ html{
 }
 
 body{
+    position: relative;
     background-color: #FFFFFF;
 }
 
@@ -124,10 +125,10 @@ footer{
     margin-top: 12rem;
 }
 
-.detalles h2{
+h2{
     margin-top: 3rem;
     font-family: var(--fuente_titulos);
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;
     font-style: italic;
     font-weight: 600;
@@ -460,15 +461,6 @@ footer{
     
 }
 
-.informacion__momentos, .informacion__vestimenta h2, .informacion__asistencia h2{
-    margin-top: 3rem;
-    font-family: var(--fuente_titulos);
-    font-size: 2.5rem;
-    text-align: center;
-    font-style: italic;
-    font-weight: 600;
-}
-
 #informacion__momentos{
     margin-top: 10rem;
 }
@@ -523,24 +515,110 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 10rem;
 }
+
+.informacion_vestimenta_ideas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.informacion_vestimenta_ideas a{
+    display: inline-flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: #EDE8E3;
+    color: #413F2F;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.informacion_vestimenta_ideas a img{
+    width: 15rem;
+    margin-top: 1rem;
+}
+
+.informacion_vestimenta_ellas, .informacion_vestimenta_ellos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#informacion__asistencia{
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #FFFFFF;
+}
+
+#texto_confirmacion{
+    display: inline-flex;
+    width: 100%;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+    font-family: var(--fuente_texto_general);
+    font-size: 1.8rem;
+    font-weight: 200;
+    font-style: italic;
+}
+
+#formulario_botones{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
 
 .informacion__asistencia{
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 10rem;
-    position: relative;
-}
-
-
-.informacion__asistencia .asistencia__datos{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
     gap: 0.5rem;
 }
+
+#asistencia__datos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1.5rem 2rem;
+    font-size: 1.4rem;
+    gap: 1.5rem;
+    font-family: var(--fuente_texto_general);
+    background-color: pink;
+}
+
+.nombreInvitado{
+    display: inline-flex;
+    width: 18rem;
+    height: 1.5rem;
+    padding-right: 1rem;
+    overflow: hidden;
+    /* background-color: green; */
+}
+
+/* input[type="checkbox"]{
+    margin-left: 1rem;
+} */
 
 .informacion__asistencia__formulario{
     display: flex;
@@ -552,7 +630,7 @@ footer{
     margin-top: 3rem;
 }
 
-.informacion__asistencia__formulario select{
+.informacion__asistencia__formulario select, .informacion__asistencia__formulario input[type="tel"]{
     width: 100%;
     padding: 1rem;
     border-radius: 5px;
@@ -562,16 +640,9 @@ footer{
     
 }
 
-.informacion__asistencia__formulario input[type="text"],
-.informacion__asistencia__formulario input[type="tel"]{
-    width: 100%;
-    padding: 1rem;
-    border-radius: 5px;
-    background-color: #EDE8E3;
-    font-size: 1.4rem;
-    font-family: var(--fuente_texto_general);
-    
-}
+/* #invitado{
+    padding: 1rem 0;
+} */
 
 textarea{
     resize: none;
@@ -584,13 +655,26 @@ textarea{
     font-family: var(--fuente_texto_general);
 }
 
-.informacion__asistencia input[type="submit"]{
-    padding: 1rem 2rem;
-    margin-top: 1rem;
+.informacion__asistencia input[type="submit"],
+#cancelarEnvio{
+    width: 18.8rem;
+    height: 4.2rem;
     background-color: #333333;
     font-family: var(--fuente_texto_general);
     font-size: 1.6rem;
     color: #FFFFFF;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#cancelarEnvio{
+    width: 18.8rem;
+    height: 4.2rem;
+    background-color: #FFC0CB;
+    font-family: var(--fuente_texto_general);
+    font-size: 1.6rem;
+    color: #333333;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s;
@@ -631,7 +715,7 @@ textarea{
     text-align: center;
 }
 
-#acceptButton{
+#acceptButton, #confirmButtom{
     padding: 1rem 2rem;
     border-radius: 10px;
     background-color: #333333;
@@ -676,6 +760,40 @@ textarea{
     font-size: 1.8rem;
 }
 
+#link_fotos{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: none;/*ocultar cuando se active el setInterval que llama la función para mostrar el elemento*/
+    width: 100%;
+    height: auto;
+    background-color: #333333;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    font-family: var(--fuente_texto_general);
+    font-size: 2rem;
+    text-align: center;
+    color: #FFFFFF;
+    gap: 2rem;
+    z-index: 99;
+}
 
+.upload_img{
+    width: 5rem;
+    position: absolute;
+    top: -4rem;
+    left: 50% - 2.5rem;
+}
+
+th, td{
+    border: 2px solid #333;
+    padding: 0.5rem;
+}
+
+table{
+    border-collapse: collapse;
+    font-size: 1.5rem;
+}
 
 

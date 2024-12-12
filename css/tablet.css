@@ -82,5 +82,21 @@ main{
 
 .informacion__asistencia__formulario input[type="text"],
 .informacion__asistencia__formulario input[type="tel"]{
-    width: 50%;
+    width: 100%;
+}
+
+#Nombre{
+    text-align: center;
+}
+
+#formulario_botones{
+    flex-direction: column;
+}
+
+.informacion_vestimenta_ideas{
+    gap: 5rem;
+}
+
+#texto_confirmacion{
+    padding: 0 5rem;
 }

@@ -76,72 +76,38 @@ setInterval(function() {
 }, 1000);
 
 
+//________________Código link para fotos______________________________________________________________
 
+// Fecha y hora específica en formato 'AAAA-MM-DDTHH:mm:ss
+const targetDate = new Date('2024-11-28T14:58:00');
 
+// Función para verificar si es hora de mostrar el elemento
+function checkDate() {
+    const now = new Date();//Fecha y hora actual
+    const element = document.getElementById("link_fotos");
 
-//formulario
+    if (now >= targetDate) {
+        element.style.display = "inline-flex";
 
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbxqzfZqkFGN0YMyfq32A7wt4fVQMmLx3P2lqngt-E0X09cK9hAfDGzKYhxjvEr6T3dw/exec'; 
-
-  const form = document.getElementById('myForm');
-
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-
-    document.getElementById("loader").style.display = "block";
-
-    // Obtener la fecha y hora actuales
-    const now = new Date();
-    
-    // Formatear la fecha y hora a "DD/MM/YYYY HH:MM:SS"
-    const day = String(now.getDate()).padStart(2, '0');
-    const month = String(now.getMonth() + 1).padStart(2, '0'); // Enero es 0
-    const year = now.getFullYear();
-    const hours = String(now.getHours()).padStart(2, '0');
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-    const seconds = String(now.getSeconds()).padStart(2, '0');
-    const formattedTimestamp = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
-
-    // Establecer el valor del campo oculto
-    document.getElementById('timestamp').value = formattedTimestamp;
-
-    function limpiarFormulario() {
-        document.getElementById("Nombres").value = "";
-        // document.getElementById("Nombres").setAttribute("disabled", "true");
-        document.getElementById("Telefono").value = "";
-        // document.getElementById("Telefono").setAttribute("disabled", "true");
-        document.getElementById("Asistencia").value = "";
-        // document.getElementById("Asistencia").setAttribute("disabled", "true");
-        document.getElementById("Mensaje").value = "";
-        // document.getElementById("Mensaje").setAttribute("disabled", "true");
-    }
-
-    //Se cierra el mensaje de agradecimiento después de enviar el formulario de confirmación
-    document.getElementById("acceptButton").addEventListener("click", ()=>{
-        document.getElementById('informacion__contenedor__agradecimiento').style.display = "none";
-    })
-
-    //Enviar formulario 
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => response.json())
-      .then(result => 
-        {
-            console.log('Éxito:', result)
-            document.getElementById('informacion__contenedor__agradecimiento').style.display = "flex";//Se muestra un mensaje de agradecimiento
-            document.getElementById("Asistencia").value === "si" ? document.getElementById("informacion__asistencia__respuesta").innerHTML = "¡Gracias por confirmar tu asistencia! <br> Estamos emocionados de verte en la boda." : document.getElementById("informacion__asistencia__respuesta").innerHTML = "Lamentamos que no puedas asistir. <br> ¡Gracias por hacérnoslo saber!" 
-            limpiarFormulario();   
-            document.getElementById("loader").style.display = "none";        
+        //Ajustar el tamaño del footer al mostrar el link fijo para subir las fotos
+        function adjustFooterMargin() {
+            if (window.innerWidth >= 1200) {
+                document.getElementById("footer").style.padding = "2rem 0 10rem 0";
+            }else{
+                document.getElementById("footer").style.paddingBottom = "16rem";
+            }
         }
-        
-      )
-      .catch(error => {
-        console.error('Error:', error.message);
-        document.getElementById("loader").style.display = "none";  
-        limpiarFormulario();
-        document.getElementById('informacion__contenedor__agradecimiento').style.display = "flex";
-        document.getElementById("informacion__asistencia__respuesta").innerHTML = "Ocurrió un error, póngase en contacto con el propietario de la página";
-      })
-  });
+
+        // Llama a la función al cargar la página
+        adjustFooterMargin();
+
+        // Escucha cambios en el tamaño de la ventana
+        window.addEventListener('resize', adjustFooterMargin);
+        }
+}
+
+//Descomentar este setInterval y ocultar el elemento cuando se haya definido el formato del elemento para que se ejecute en su momento la función checkDate
+setInterval(checkDate, 1000); //Ejecutar la función cuando la fecha indicada se cumpla 
 
 
 

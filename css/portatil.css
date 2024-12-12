@@ -60,15 +60,29 @@ main{
     gap: 10rem;
 }
 
-.informacion__asistencia input[type="submit"]:hover, #acceptButton:hover, .informacion__momentos__verUbicacion:hover{
+.informacion__asistencia input[type="submit"]:hover, #acceptButton:hover, .informacion__momentos__verUbicacion:hover, #cancelarEnvio:hover, #confirmButtom:hover{
     opacity: 0.9;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .temporal_mostrarModelosFechas{
     flex-direction: row;
-    
 }
+
+#formulario_botones{
+    flex-direction: row;
+}
+
+.informacion_vestimenta_ideas{
+    gap: 10rem;
+}
+
+#texto_confirmacion{
+    padding: 0 15rem;
+}
+
+
+
 
 
 

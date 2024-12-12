@@ -11,6 +11,10 @@
 </head>
 <body>
     <header></header>
+    <a id="link_fotos" href="https://forms.gle/K8NPCnFXG3DMvMHF6" target="blank">
+        <img class="upload_img" src="./assets/upload.gif" alt="">
+        Ayúdanos a reunir las imágenes más especiales de nuestra boda. Usa este enlace para compartir tus fotos de la fiesta
+     </a>
     <main>
         <img class="main__fixedImage main__fixedImage__left" src="./assets/rama_de_flores_left.png" alt="rama de flores">
         <img class="main__fixedImage main__fixedImage__right" src="./assets/rama_de_flores_right.png" alt="rama de flores">
@@ -26,8 +30,7 @@
         <section class="seccion detalles">
             <div class="detalles__citaBiblica">
                 <p class="detalles__citaBiblica__versiculo">
-                    Alguien que está solo puede ser atacado y vencido, pero si son dos, se ponen de espalda con espalda y vencen; mejor todavía 
-                    si son tres, porque una cuerda triple no se corta fácilmente.
+                    Uno solo puede ser vencido, pero dos podrán resistir. Y además, la cuerda de tres hilos no se rompe fácilmente. 
                 </p>
                 <span class="detalles__citaBiblica__cita">Eclesiastés 4:12</span>
             </div>
@@ -83,7 +86,7 @@
                 <div class="informacion__momentos__ceremonia">
                     <img class="informacion__iconoImagen" src="./assets/iglesia.svg" alt="iglesia">
                     <h2>Ceremonia</h2>
-                    <span>6:00pm</span>
+                    <span>7:00pm</span>
                     <span class="informacion__momentos__lugar">Catedral Maria Reina<br>Barranquilla</span>
                     <a href="https://maps.app.goo.gl/Cw2vB432xTBCbWi87" class="informacion__momentos__verUbicacion" target="_blank">Ver ubicación</a>
                 </div>
@@ -102,42 +105,61 @@
             <div class="informacion__vestimenta">
                 <img class="informacion__iconoImagen" src="./assets/vestimenta.svg" alt="vestido formal de mujer y traje formal de hombre">
                 <h2>Código de vestimenta</h2>
-                <span>Por definir</span>
-            </div>
-            <div class="informacion__asistencia">
-                <h2>Confirma tu asistencia</h2>
-                <form id="myForm" class="informacion__asistencia__formulario" method="POST">
-                    <div class="asistencia__datos">
-                        <input type="text" id="Nombres" name="Nombres" required placeholder="Nombres de los asistentes">
-                        <input type="tel" id="Telefono" name="Telefono" required placeholder="Teléfono">
+                <div class="informacion_vestimenta_ideas">
+                    <div class="informacion_vestimenta_ellas">
+                        <!-- <span>Ellas</span> -->
+                        <a href="https://es.pinterest.com/senorysenoraDonado/ellas/">Ver ideas<img src="./assets/vestimenta_mujer.jpg" alt=""></a>
                     </div>
+                    <div class="informacion_vestimenta_ellos">
+                        <!-- <span>Ellos</span> -->
+                        <a href="https://es.pinterest.com/senorysenoraDonado/ellos/">Ver ideas <img src="./assets/vestimenta_hombre.jpg" alt=""></a>
+                    </div>
+                </div>
+                
+            </div>
+            <h2>Confirma tu asistencia</h2>
+            <span id="texto_confirmacion">¡Nos encantaría contar con tu presencia! Por favor, confirma tu asistencia para nuestra boda antes del [fecha límite]. 
+                Esto nos ayudará a organizar todo con mucho cariño para ti.</span>
+            <button id="confirmButtom">Confirmar</button>
+            <div id="informacion__asistencia" class="informacion__asistencia">
+                    <form id="myForm" class="informacion__asistencia__formulario" action="./confirmar.php" method="POST">
+                        <!-- Campo oculto para la fecha y hora que se envían al formulario-->
+                    <input type="hidden" id="timestamp" name="FechaHora" value="">
+                    <input type="hidden" name="token" id="token" value="">
+                    <span>Nos complace invitar a:</span>
+                    <div id="asistencia__datos" class="asistencia__datos"></div>
+                    <input type="tel" name="Telefono" id="Telefono" required placeholder="Teléfono">
                     <select name="Asistencia" id="Asistencia" required>
                         <option value="" selected disabled>Confirmación</option>
                         <option value="si">Sí, allí estaré</option>
                         <option value="no">No</option>
                     </select>
                     <textarea id="Mensaje" maxlength="300" cols="6" name="Mensaje" required placeholder="Mensaje para los novios"></textarea>
-                    <!-- Campo oculto para la fecha y hora que se envían al formulario-->
-                    <input type="hidden" id="timestamp" name="FechaHora">
-                    <input type="submit" id="submit" value="Enviar confirmación">
+                    
+                    <div id="formulario_botones">
+                        <input type="submit" id="submit" value="Enviar confirmación">
+                        <button id="cancelarEnvio">Cancelar</button>
+                    </div>
                 </form>
             </div>
         </section>
+        <div id="informacion__contenedor__agradecimiento">
+            <div id="informacion__asistencia__agradecimiento">
+                <span id="informacion__asistencia__respuesta"></span>
+                <button id="acceptButton">Aceptar</button>
+            </div>
+        </div>
+        <div id="loader" class="loader"></div>
     </main>
-    <footer>
+    <footer id="footer">
         <span class="footer__desarrollador">Desarrollado por Ronald Rodríguez Campillo</span>
         <div class="footer__links">
             <a class="footer__web" href="https://codews.co/">codews.co</a>
             <a href="https://www.instagram.com/codews.co?igsh=cmRjeTNwazljcmV4"><img class="footer__iconos" src="./assets/instagram.ico" alt="logo instagram"></a>
         </div>
     </footer>
-    <div id="informacion__contenedor__agradecimiento">
-        <div id="informacion__asistencia__agradecimiento">
-            <span id="informacion__asistencia__respuesta"></span>
-            <button id="acceptButton">Aceptar</button>
-        </div>
-    </div>
-    <div id="loader" class="loader"></div>
+    
     <script src="./app.js"></script>
+    <script src="./confirmar.js"></script>
 </body>
 </html>

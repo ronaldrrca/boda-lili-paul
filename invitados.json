@@ -1,0 +1,32 @@
+{
+    "def456uvw": {
+        "nombres": {
+            "María Gómez": false,
+            "Celia Campillo": true
+        },
+        "confirmado": true,
+        "fecha": "30\/11\/2024",
+        "telefono": "300 123 45 67",
+        "mensaje": ""
+    },
+    "abc123xyz": {
+        "nombres": [
+            "Juan Pérez"
+        ],
+        "confirmado": false,
+        "fecha": "29\/11\/2024 17:48:40",
+        "telefono": "3007428335",
+        "mensaje": ""
+    },
+    "ghi789rst": {
+        "nombres": [
+            "Marco Ayala",
+            "Ronald Rafael Rodríguez Campillo Campillo xampillo",
+            "Denis Ortiz"
+        ],
+        "confirmado": false,
+        "fecha": "29\/11\/2024",
+        "telefono": "300 987 65 43",
+        "mensaje": ""
+    }
+}
