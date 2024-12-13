@@ -52,35 +52,34 @@ const invitados = './invitados.json';
 fetch(invitados)
   .then(response => {
     if (!response.ok) {
-      
       throw new Error(`Error al obtener el archivo JSON: ${response.statusText}`);
     }
     return response.json(); // Convertir la respuesta a JSON
   })
   .then(data => {
     let infoInvitado = data.find(item => item.token === token);
-    
-    
-       
-    //Validando el token
-    document.getElementById("confirmButtom").addEventListener("click", ()=>{
-      // Filtrar los invitados que tienen confirmación === true
-      let invitadosConfirmados = infoInvitado.invitados.filter(invitado => invitado.confirmacion === false);
 
+    // Escuchar el botón de confirmación
+    document.getElementById("confirmButtom").addEventListener("click", () => {
+      // Validar si infoInvitado es undefined antes de acceder a sus propiedades
       if (!infoInvitado) {
+        console.log("Es indefinida");
         document.getElementById("informacion__contenedor__agradecimiento").style.display = "flex";
         document.getElementById("informacion__asistencia__respuesta").innerHTML = "Token inválido, póngase en contacto con los novios";
-        throw new Error(`El token "${token}" no existe en el JSON.`);
-      }else if (invitadosConfirmados.length === 0) {
+        throw new Error(`El token "${token}" no existe.`);
+      }
+
+      // Filtrar los invitados que tienen confirmación === false
+      let invitadosConfirmados = infoInvitado.invitados.filter(invitado => invitado.confirmacion === false);
+
+      if (invitadosConfirmados.length === 0) {
         document.getElementById("informacion__contenedor__agradecimiento").style.display = "flex";
         document.getElementById("informacion__asistencia__respuesta").innerHTML = "Ya habías confirmado";
-      }else if(invitadosConfirmados.length > 0){
-        //Validando y mostrando los invitados
+      } else if (invitadosConfirmados.length > 0) {
+        // Mostrar los invitados
         console.log(invitadosConfirmados);
-        
-        invitadosConfirmados.forEach((element, index) => {
-          console.log(element.nombre);
 
+        invitadosConfirmados.forEach((element, index) => {
           let asistencia__datos = document.getElementById("asistencia__datos");
           const invitado = document.createElement("div");
           invitado.setAttribute("id", `invitado_${index + 1}`);
@@ -88,26 +87,22 @@ fetch(invitados)
           checkInvitado.type = "checkbox";
           checkInvitado.setAttribute("name", `${element.nombre}`);
           const nombreInvitado = document.createElement("span");
-          nombreInvitado.classList.add("nombreInvitado")
-          
+          nombreInvitado.classList.add("nombreInvitado");
+
           asistencia__datos.appendChild(invitado);
           invitado.appendChild(nombreInvitado);
           invitado.appendChild(checkInvitado);
           nombreInvitado.innerHTML = `${index + 1}. ${element.nombre}`;
-          
         });
-        
-        
-        document.getElementById("informacion__asistencia").style.display = "flex";  
+
+        document.getElementById("informacion__asistencia").style.display = "flex";
         document.body.style.overflow = 'hidden';
-    }
-        
-    })
-    
+      }
+    });
   })
   .catch(error => {
     console.error('Error al procesar el JSON:', error);
-});
+  });
 
 
 //---------------------------------------------------------------------------------------------
