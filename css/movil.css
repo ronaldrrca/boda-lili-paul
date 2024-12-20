@@ -39,11 +39,9 @@ main{
 }
 
 footer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 2rem 0;
     margin-top: 15rem;
+    gap: 1rem;
     background-color: #EDE8E3;
 }
 
@@ -564,6 +562,14 @@ h2{
     background-color: #FFFFFF;
 }
 
+#informacion__asistencia__preparacion{
+    max-width: 80rem;
+    font-family: var(--fuente_titulos);
+    font-size: 2.2rem;
+    text-align: center;
+    padding: 5rem;
+}
+
 #texto_confirmacion{
     display: inline-flex;
     width: 100%;
@@ -573,6 +579,7 @@ h2{
     font-size: 1.8rem;
     font-weight: 200;
     font-style: italic;
+    text-align: center;
 }
 
 #formulario_botones{
@@ -604,21 +611,36 @@ h2{
     font-size: 1.4rem;
     gap: 1.5rem;
     font-family: var(--fuente_texto_general);
-    background-color: pink;
+    background-color: rgba(255, 192, 203, 0.4);
+    border-radius: 5px 5px 0 0;
+}
+
+#asistencia__datos__encabezado{
+    font-family: var(--fuente_titulos);
+    font-size: 2.4rem;
 }
 
 .nombreInvitado{
-    display: inline-flex;
-    width: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22rem;
     height: 1.8rem;
-    padding-right: 1rem;
+    padding: 0.2rem 1rem 0 0;
     overflow: hidden;
-    /* background-color: green; */
+    font-size: 1.4rem;
+    user-select: none;
+    pointer-events: none;
+    cursor: not-allowed;
+    background-color: rgba(255, 192, 203, 0.1);
 }
 
-/* input[type="checkbox"]{
-    margin-left: 1rem;
-} */
+.invitados{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
 
 .informacion__asistencia__formulario{
     display: flex;
@@ -640,10 +662,6 @@ h2{
     
 }
 
-/* #invitado{
-    padding: 1rem 0;
-} */
-
 textarea{
     resize: none;
     width: 100%;
@@ -662,6 +680,7 @@ textarea{
     background-color: #333333;
     font-family: var(--fuente_texto_general);
     font-size: 1.6rem;
+    font-weight: 600;
     color: #FFFFFF;
     border-radius: 5px;
     cursor: pointer;
@@ -700,7 +719,8 @@ textarea{
     align-items: center;
     gap: 2rem;
     width: 35rem;
-    height: 15rem;
+    height: auto;
+    padding: 2rem 0;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -751,13 +771,17 @@ textarea{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .footer__desarrollador, .footer__web{
     font-family: var(--fuente_texto_general);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+}
+
+.footer__trabajos{
+    font-family: var(--fuente_texto_general);
+    font-size: 1.2rem;
 }
 
 #link_fotos{
@@ -776,7 +800,7 @@ textarea{
     text-align: center;
     color: #FFFFFF;
     gap: 2rem;
-    z-index: 99;
+    z-index: 300;
 }
 
 .upload_img{
@@ -784,6 +808,7 @@ textarea{
     position: absolute;
     top: -4rem;
     left: 50% - 2.5rem;
+    
 }
 
 th, td{

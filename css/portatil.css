@@ -77,10 +77,9 @@ main{
     gap: 10rem;
 }
 
-#texto_confirmacion{
-    padding: 0 15rem;
+#informacion__asistencia__preparacion{
+    max-width: 90rem;
 }
-
 
 
 

@@ -9,7 +9,7 @@ let detalles__cuentaRegresiva__dias = document.getElementById("detalles__cuentaR
 let detalles__cuentaRegresiva__horas = document.getElementById("detalles__cuentaRegresiva__horas");
 let detalles__cuentaRegresiva__minutos = document.getElementById("detalles__cuentaRegresiva__minutos");
 let detalles__cuentaRegresiva__segundos = document.getElementById("detalles__cuentaRegresiva__segundos");
-const fechaBoda = new Date(2025, 2, 15, 17, 0, 0);// Fecha de la boda
+const fechaBoda = new Date(2025, 2, 15, 19, 0, 0);// Fecha de la boda
 
 
 //________________Código del slider de imágenes______________________________________________________________
@@ -79,7 +79,7 @@ setInterval(function() {
 //________________Código link para fotos______________________________________________________________
 
 // Fecha y hora específica en formato 'AAAA-MM-DDTHH:mm:ss
-const targetDate = new Date('2024-11-28T14:58:00');
+const targetDate = new Date('2025-03-15T21:00:00');
 
 // Función para verificar si es hora de mostrar el elemento
 function checkDate() {

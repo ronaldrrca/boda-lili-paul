@@ -1,32 +1,3 @@
-//Manejar el comportamiento de los botones de confirmar y submit
-
-document.getElementById("acceptButton").addEventListener("click", ()=>{
-    document.getElementById("informacion__contenedor__agradecimiento").style.display = "none";
-    window.location.reload();
-    window.scrollTo(0, 0);
-
-})
-
-
-document.getElementById("cancelarEnvio").addEventListener("click", ()=>{
-    document.getElementById("informacion__asistencia").style.display = "none";  
-    document.body.style.overflow = 'auto';
-})
-
-function limpiarFormulario() {
-  // document.getElementById("Nombres").value = "";
-  // document.getElementById("Nombres").setAttribute("disabled", "true");
-  document.getElementById("Telefono").value = "";
-  // document.getElementById("Telefono").setAttribute("disabled", "true");
-  document.getElementById("Asistencia").value = "";
-  // document.getElementById("Asistencia").setAttribute("disabled", "true");
-  document.getElementById("Mensaje").value = "";
-  // document.getElementById("Mensaje").setAttribute("disabled", "true");
-}
-
-
-//------------------------------------------------------------------------------------------
-
 
 // Obtener la URL completa
 const url = window.location.href;
@@ -57,13 +28,13 @@ fetch(invitados)
     return response.json(); // Convertir la respuesta a JSON
   })
   .then(data => {
+        
     let infoInvitado = data.find(item => item.token === token);
-
+        
     // Escuchar el botón de confirmación
     document.getElementById("confirmButtom").addEventListener("click", () => {
       // Validar si infoInvitado es undefined antes de acceder a sus propiedades
       if (!infoInvitado) {
-        console.log("Es indefinida");
         document.getElementById("informacion__contenedor__agradecimiento").style.display = "flex";
         document.getElementById("informacion__asistencia__respuesta").innerHTML = "Token inválido, póngase en contacto con los novios";
         throw new Error(`El token "${token}" no existe.`);
@@ -77,24 +48,53 @@ fetch(invitados)
         document.getElementById("informacion__asistencia__respuesta").innerHTML = "Ya habías confirmado";
       } else if (invitadosConfirmados.length > 0) {
         // Mostrar los invitados
-        console.log(invitadosConfirmados);
-
-        invitadosConfirmados.forEach((element, index) => {
+          invitadosConfirmados.forEach((element, index) => {
           let asistencia__datos = document.getElementById("asistencia__datos");
           const invitado = document.createElement("div");
           invitado.setAttribute("id", `invitado_${index + 1}`);
+          invitado.innerHTML = `${index + 1}. &nbsp;`;
+          invitado.classList.add(`invitados`);
+          const asistencia = document.createElement("input");
+          asistencia.classList.add("asistencia");
+          asistencia.setAttribute("id", `asistencia_${index + 1}`)
+          asistencia.setAttribute("name", "asistencia[]");
+          asistencia.value = "no";
+          asistencia.type = "hidden";
           const checkInvitado = document.createElement("input");
           checkInvitado.type = "checkbox";
-          checkInvitado.setAttribute("name", `${element.nombre}`);
-          const nombreInvitado = document.createElement("span");
+          checkInvitado.setAttribute("id", `checkInvitado_${index + 1}`)
+          checkInvitado.setAttribute("data-id", index + 1)
+          checkInvitado.value = "si";
+          checkInvitado.setAttribute("name", "asistencia[]")
+
+          
+          const nombreInvitado = document.createElement("input");
           nombreInvitado.classList.add("nombreInvitado");
+          nombreInvitado.setAttribute("name", "nombresInvitados[]");
+          nombreInvitado.setAttribute("readonly", true);
+          nombreInvitado.setAttribute("data-id", index + 1)
+          const identificadorInvitado = document.createElement("input");
+          identificadorInvitado.setAttribute("name", "identificadorInvitado[]")
+          identificadorInvitado.value = `${element.id}`
+          identificadorInvitado.type = "hidden";
 
           asistencia__datos.appendChild(invitado);
           invitado.appendChild(nombreInvitado);
+          invitado.appendChild(asistencia);
           invitado.appendChild(checkInvitado);
-          nombreInvitado.innerHTML = `${index + 1}. ${element.nombre}`;
-        });
+          invitado.appendChild(identificadorInvitado);
+          nombreInvitado.value = `${element.nombre}`;
 
+          //Controlar que solo se envíe el valor "no" cuando el checkbox no está marcado
+        function verificarCheckInvitado(event) {
+            let check = event.target; // El checkbox que disparó el evento
+            check.checked ? asistencia.disabled = true : asistencia.disabled = false;
+        }
+
+    // Asignar el evento change al checkbox
+    checkInvitado.addEventListener("change", verificarCheckInvitado);
+           
+  });
         document.getElementById("informacion__asistencia").style.display = "flex";
         document.body.style.overflow = 'hidden';
       }
@@ -120,7 +120,7 @@ fetch(invitados)
 
    // Establecer el valor del campo oculto
    document.getElementById('timestamp').value = formattedTimestamp;
-  console.log(formattedTimestamp);
+  // console.log(formattedTimestamp);
 
 
 
@@ -131,24 +131,20 @@ const form = document.getElementById('myForm');
 form.addEventListener('submit', e => {
   e.preventDefault();
 
-  document.getElementById("loader").style.display = "block"; 
   const formData = new FormData(form); // Captura los datos del formulario
 
+  //Maneja el envío de los datos al backend
   fetch('confirmar.php', { 
     method: 'POST',
     body: formData
   })
   .then(response => response.text()) // Maneja la respuesta como texto
   .then(data => {
-    console.log("ok"); 
-    
-    
   })
   .catch(error => {
     // document.getElementById("informacion__asistencia").style.display = "none";
     console.error('Error:', error); // Maneja errores en la solicitud
     console.log("Error al enviar los datos.");
-     
   });
 
 
@@ -156,13 +152,60 @@ form.addEventListener('submit', e => {
   document.getElementById("acceptButton").addEventListener("click", ()=>{
       document.getElementById('informacion__contenedor__agradecimiento').style.display = "none";
   })
-
-  document.getElementById("loader").style.display = "none"; 
         document.getElementById("informacion__asistencia").style.display = "none";
         document.getElementById('informacion__contenedor__agradecimiento').style.display = "flex";//Se muestra un mensaje de agradecimiento
-        document.getElementById("asistencia").value === "si" ? document.getElementById("informacion__asistencia__respuesta").innerHTML = 
-          "¡Gracias por confirmar tu asistencia! <br> Estamos emocionados de verte en la boda." : document.getElementById("informacion__asistencia__respuesta").innerHTML = 
-          "Lamentamos que no puedas asistir. <br> ¡Gracias por hacérnoslo saber!" 
-        limpiarFormulario();   
+        
+        const checkboxes = document.querySelectorAll('input[name="asistencia[]"]');
+        const nombres = document.querySelectorAll('input[name="nombresInvitados[]"]');
+        
+    // Verificar si al menos uno está marcado
+    const algunoMarcado = Array.from(checkboxes).some(checkbox => checkbox.checked);
+    if (algunoMarcado) {
+      // Filtrar los checkboxes que están marcados
+        const seleccionados = Array.from(checkboxes)
+        .filter(checkbox => checkbox.checked) // Dejar solo los marcados
+
+        // Obtener el nombre relacionado usando el data-id
+        .map(checkbox => {
+          const id = checkbox.getAttribute('data-id');
+          const nombreInput = Array.from(nombres).find(nombre => nombre.getAttribute('data-id') === id);
+          return { checkbox, nombre: nombreInput ? nombreInput.value : null };
+        });
+
+      // Mostrar los resultados
+      seleccionados.forEach((item, index) => {
+        document.getElementById("informacion__asistencia__respuesta").innerHTML += `${index + 1}.&nbsp; ${item.nombre} <br>`;
+      });
+      document.getElementById("informacion__asistencia__respuesta").innerHTML += "¡Gracias por confirmar tu asistencia! <br> Estamos emocionados de verte en la boda. <br>";
+      document.getElementById("informacion__asistencia__respuesta").innerHTML 
+        += `Cuentas con ${seleccionados.length} ${seleccionados.length == 1 ? "cupo confirmado" : "cupos confirmados"}`;
+    } else {
+        document.getElementById("informacion__asistencia__respuesta").innerHTML = "Lamentamos que no puedas asistir. <br> ¡Gracias por hacérnoslo saber!" 
+    }
+      
+       
 });
+
+
+//------------------------------------------------------------------------------------------
+//Manejar el comportamiento de los botones de confirmar y submit
+
+document.getElementById("acceptButton").addEventListener("click", ()=>{
+  document.getElementById("informacion__contenedor__agradecimiento").style.display = "none";
+  window.location.reload();
+  window.scrollTo(0, 0);
+
+})
+
+
+document.getElementById("cancelarEnvio").addEventListener("click", ()=>{
+  document.getElementById("informacion__asistencia").style.display = "none";  
+  document.body.style.overflow = 'auto';
+  location.href = location.href;
+
+})
+
+
+
+
 

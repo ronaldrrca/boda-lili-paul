@@ -13,7 +13,7 @@
     <header></header>
     <a id="link_fotos" href="https://forms.gle/K8NPCnFXG3DMvMHF6" target="blank">
         <img class="upload_img" src="./assets/upload.gif" alt="">
-        Ayúdanos a reunir las imágenes más especiales de nuestra boda. Usa este enlace para compartir tus fotos de la fiesta
+        Queremos crear un álbum lleno de recuerdos y tú puedes ser nuestro cómplice. Comparte tus fotos de la fiesta usando este enlace
      </a>
     <main>
         <img class="main__fixedImage main__fixedImage__left" src="./assets/rama_de_flores_left.png" alt="rama de flores">
@@ -93,7 +93,7 @@
                 <div class="informacion__momentos__celebracion">
                     <img class="informacion__iconoImagen" src="./assets/copas.svg" alt="copas de brindis">
                     <h2>Celebración</h2>
-                    <span>8:00pm</span>
+                    <span>9:00pm</span>
                     <span class="informacion__momentos__lugar">Salón de Eventos Dayder<br>Calle 76 # 44 - 45</span>
                     <a href="https://maps.app.goo.gl/KorYaWTijcLFyKWE8" class="informacion__momentos__verUbicacion" target="_blank">Ver ubicación</a>
                 </div>
@@ -118,28 +118,26 @@
                 
             </div>
             <h2>Confirma tu asistencia</h2>
-            <span id="texto_confirmacion">¡Nos encantaría contar con tu presencia! Por favor, confirma tu asistencia para nuestra boda antes del [fecha límite]. 
+            <span id="texto_confirmacion">¡Nos encantaría contar con tu presencia! Por favor, confirma tu asistencia para nuestra boda antes del 22 de febrero. 
                 Esto nos ayudará a organizar todo con mucho cariño para ti.</span>
             <button id="confirmButtom">Confirmar</button>
             <div id="informacion__asistencia" class="informacion__asistencia">
-                    <form id="myForm" class="informacion__asistencia__formulario" action="./confirmar.php" method="POST">
-                        <!-- Campo oculto para la fecha y hora que se envían al formulario-->
-                    <input type="hidden" id="timestamp" name="fechaHora" value="">
-                    <input type="hidden" name="token" id="token" value="">
-                    <span>Nos complace invitar a:</span>
-                    <div id="asistencia__datos" class="asistencia__datos"></div>
-                    <input type="tel" name="telefono" id="telefono" required placeholder="Teléfono">
-                    <select name="asistencia" id="asistencia" required>
-                        <option value="" selected disabled>Confirmación</option>
-                        <option value="si">Sí, allí estaré</option>
-                        <option value="no">No</option>
-                    </select>
-                    <textarea id="Mensaje" maxlength="300" cols="6" name="mensaje" required placeholder="Mensaje para los novios"></textarea>
-                    
-                    <div id="formulario_botones">
-                        <input type="submit" id="submit" value="Enviar confirmación">
-                        <button id="cancelarEnvio">Cancelar</button>
-                    </div>
+                <span id="informacion__asistencia__preparacion">
+                    Hemos preparado todo para que nuestra boda sea inolvidable y estás invitado a celebrar con nosotros.
+                    Por favor marca la casilla correspondiente a cada invitado para confirmar su asistencia
+                </span>
+                <form id="myForm" class="informacion__asistencia__formulario" action="./confirmar.php" method="POST">
+                <!-- Campo oculto para la fecha y hora que se envían al formulario-->
+                <input type="hidden" id="timestamp" name="fechaHora" value="">
+                <input type="hidden" name="token" id="token" value="">
+                <!-- <span id="asistencia__datos__encabezado">Nos complace invitar a:</span> -->
+                <div id="asistencia__datos" class="asistencia__datos"></div>
+                <input type="tel" name="telefono" id="telefono" required placeholder="Teléfono">
+                <textarea id="Mensaje" maxlength="300" cols="6" name="mensaje" required placeholder="Mensaje para los novios"></textarea>
+                <div id="formulario_botones">
+                    <input type="submit" id="submit" value="Enviar confirmación">
+                    <button id="cancelarEnvio">Cancelar</button>
+                </div>
                 </form>
             </div>
         </section>
@@ -153,9 +151,10 @@
     </main>
     <footer id="footer">
         <span class="footer__desarrollador">Desarrollado por Ronald Rodríguez Campillo</span>
+        <span class="footer__trabajos">Páginas, sitios, aplicaciones web, invitaciones web para bodas, cumpleaños, aniversarios y eventos especiales.</span>
         <div class="footer__links">
-            <a class="footer__web" href="https://codews.co/">codews.co</a>
-            <a href="https://www.instagram.com/codews.co?igsh=cmRjeTNwazljcmV4"><img class="footer__iconos" src="./assets/instagram.ico" alt="logo instagram"></a>
+            <a class="footer__web" href="https://codews.co/" target="_blank">www.codews.co</a>
+            <a href="https://www.instagram.com/codews.co?igsh=cmRjeTNwazljcmV4" target="_blank"><img class="footer__iconos" src="./assets/instagram.ico" alt="logo instagram"></a>
         </div>
     </footer>
     

@@ -98,5 +98,9 @@ main{
 }
 
 #texto_confirmacion{
-    padding: 0 5rem;
+    max-width: 80rem;
+}
+
+#informacion__asistencia__preparacion{
+    max-width: 65rem;
 }
