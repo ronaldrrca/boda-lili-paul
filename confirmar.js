@@ -28,15 +28,28 @@ fetch(invitados)
     return response.json(); // Convertir la respuesta a JSON
   })
   .then(data => {
-        
     let infoInvitado = data.find(item => item.token === token);
-        
+    let informacion__tituloTarjeta = document.getElementById("informacion__tituloTarjeta");
+    let informacion__mensaje__tituloTarjeta = document.getElementById("informacion__mensaje__tituloTarjeta");    
+    let fechaLimiteConfirmacion = new Date("Sat Feb 22 2025 23:59:59 GMT-0500"); 
+    let fechaActual = new Date();
+
+   
+    if (infoInvitado) {
+      informacion__mensaje__tituloTarjeta.innerHTML = "Hemos preparado todo para que nuestra boda sea inolvidable y estás invitado a celebrar con nosotros.";
+      informacion__tituloTarjeta.innerHTML = infoInvitado.nombreInvitacion;
+    }else{
+      informacion__mensaje__tituloTarjeta.style.marginBottom = 0;
+      informacion__mensaje__tituloTarjeta.innerHTML = "Nos complace participarte de nuestra boda.";
+    }
+            
     // Escuchar el botón de confirmación
     document.getElementById("confirmButtom").addEventListener("click", () => {
       // Validar si infoInvitado es undefined antes de acceder a sus propiedades
       if (!infoInvitado) {
         document.getElementById("informacion__contenedor__agradecimiento").style.display = "flex";
-        document.getElementById("informacion__asistencia__respuesta").innerHTML = "Token inválido, póngase en contacto con los novios";
+        document.getElementById("informacion__asistencia__respuesta").innerHTML = 
+        "Has recibido este enlace como participación a nuestra boda, razón por la cual no es posible confirmar tu asistencia.";
         throw new Error(`El token "${token}" no existe.`);
       }
 
@@ -47,6 +60,17 @@ fetch(invitados)
         document.getElementById("informacion__contenedor__agradecimiento").style.display = "flex";
         document.getElementById("informacion__asistencia__respuesta").innerHTML = "Ya habías confirmado";
       } else if (invitadosConfirmados.length > 0) {
+
+        // Controlar la fecha de confirmación a la fiesta
+    if (fechaActual.getTime() > fechaLimiteConfirmacion.getTime()) {
+      document.getElementById("informacion__contenedor__agradecimiento").style.display = "flex";
+      document.getElementById("informacion__asistencia__respuesta").innerHTML = 
+      "La fecha límite para confirmar tu asistencia a la fiesta era el 22 de febrero. Lamentamos no poder reservar un espacio para ti, pero si lo deseas puedes acompañarnos en la ceremonia religiosa.";
+    }
+
+    const link_fotos = document.getElementById("link_fotos");
+    link_fotos.style.display = "none";
+
         // Mostrar los invitados
           invitadosConfirmados.forEach((element, index) => {
           let asistencia__datos = document.getElementById("asistencia__datos");
@@ -176,9 +200,9 @@ form.addEventListener('submit', e => {
       seleccionados.forEach((item, index) => {
         document.getElementById("informacion__asistencia__respuesta").innerHTML += `${index + 1}.&nbsp; ${item.nombre} <br>`;
       });
-      document.getElementById("informacion__asistencia__respuesta").innerHTML += "¡Gracias por confirmar tu asistencia! <br> Estamos emocionados de verte en la boda. <br>";
+      document.getElementById("informacion__asistencia__respuesta").innerHTML += "<br>¡Gracias por confirmar tu asistencia! <br> Estamos emocionados de verte en la boda. <br>";
       document.getElementById("informacion__asistencia__respuesta").innerHTML 
-        += `Cuentas con ${seleccionados.length} ${seleccionados.length == 1 ? "cupo confirmado" : "cupos confirmados"}`;
+        += `Cuentas con <b>${seleccionados.length}</b> ${seleccionados.length == 1 ? "<b>cupo</b> confirmado" : "<b>cupos</b> confirmados"}`;
     } else {
         document.getElementById("informacion__asistencia__respuesta").innerHTML = "Lamentamos que no puedas asistir. <br> ¡Gracias por hacérnoslo saber!" 
     }

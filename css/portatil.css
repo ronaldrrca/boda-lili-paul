@@ -7,7 +7,7 @@ main{
 }
 
 .main__fixedImage__right{
-    top: 45rem;
+    bottom: 4rem;
 }
 
 .presentacion__logoNovios{
@@ -77,9 +77,26 @@ main{
     gap: 10rem;
 }
 
-#informacion__asistencia__preparacion{
-    max-width: 90rem;
+#tabla_confirmados .confirmadosMensaje, #tabla_confirmados .thMensaje{
+    display: table-cell;
+    min-width: 40rem;
+    max-width: 60rem;
 }
+
+#main_confirmaciones{
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+/* Estilos adicionales para la tabla */
+.confirmadosNombre,
+.confirmadosAsistencia,
+.confirmadosFecha,
+.confirmadosTelefono,
+.confirmadosMensaje {
+    font-size: 1.5;
+}
+
 
 
 

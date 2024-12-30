@@ -87,19 +87,19 @@
             {
                 "id": 1,
                 "nombre": "DIEGO ROYERO LÓPEZ",
-                "confirmacion": false,
-                "asistencia": false
+                "confirmacion": true,
+                "asistencia": "no"
             },
             {
                 "id": 2,
                 "nombre": "BRIGITTE MORRIS RODRÍGUEZ",
-                "confirmacion": false,
-                "asistencia": false
+                "confirmacion": true,
+                "asistencia": "si"
             }
         ],
-        "fecha_confirmacion": "",
-        "telefono": "",
-        "mensaje": ""
+        "fecha_confirmacion": "29/12/2024 08:25:25",
+        "telefono": "3003581311",
+        "mensaje": "Esperamos que esta unión sea para siempre y que tengan un montón de hijos para poder ser un mejor tío"
     },
     {
         "token": "Z1Pa0E6D8f",
@@ -108,31 +108,31 @@
             {
                 "id": 1,
                 "nombre": "CARLOS RODRÍGUEZ CAMPILLO",
-                "confirmacion": false,
-                "asistencia": false
+                "confirmacion": true,
+                "asistencia": "si"
             },
             {
                 "id": 2,
                 "nombre": "DESIREE FLÓREZ",
-                "confirmacion": false,
-                "asistencia": false
+                "confirmacion": true,
+                "asistencia": "si"
             },
             {
                 "id": 3,
                 "nombre": "MARIANGEL RODRÍGUEZ FLÓREZ",
-                "confirmacion": false,
-                "asistencia": false
+                "confirmacion": true,
+                "asistencia": "no"
             },
             {
                 "id": 4,
                 "nombre": "SANTIAGO RODRÍGUEZ FLÓREZ",
-                "confirmacion": false,
-                "asistencia": false
+                "confirmacion": true,
+                "asistencia": "no"
             }
         ],
-        "fecha_confirmacion": "",
-        "telefono": "",
-        "mensaje": ""
+        "fecha_confirmacion": "29/12/2024 08:25:25",
+        "telefono": "3007428335",
+        "mensaje": "iuybpfa iauhiu aiu aeiuhai u aub cialu iua fauifiuhf9ua ub i"
     },
     {
         "token": "CHPdtoQ2np",
@@ -231,6 +231,12 @@
             {
                 "id": 2,
                 "nombre": "ANA QUIROZ CUELLO",
+                "confirmacion": false,
+                "asistencia": false
+            },
+            {
+                "id": 3,
+                "nombre": "NERELCY QUIROZ YEPES",
                 "confirmacion": false,
                 "asistencia": false
             }
@@ -661,30 +667,30 @@
                 "id": 1,
                 "nombre": "GLENDA VÁSQUEZ GUTIERREZ",
                 "confirmacion": false,
-                "asistencia": "no"
+                "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "SANTIAGO MANGA VÁSQUEZ",
                 "confirmacion": false,
-                "asistencia": "no"
+                "asistencia": false
             },
             {
                 "id": 3,
                 "nombre": "ESTEBAN MANGA VÁSQUEZ",
                 "confirmacion": false,
-                "asistencia": "no"
+                "asistencia": false
             },
             {
                 "id": 4,
                 "nombre": "GABRIELA MANGA VÁSQUEZ",
                 "confirmacion": false,
-                "asistencia": "no"
+                "asistencia": false
             }
         ],
-        "fecha_confirmacion": "19/12/2024 18:02:59",
+        "fecha_confirmacion": "20/12/2024 16:53:18",
         "telefono": "3003581311",
-        "mensaje": "rqwer"
+        "mensaje": "p"
     },
     {
         "token": "Yt2m1dVqSC",

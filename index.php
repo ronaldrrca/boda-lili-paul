@@ -11,13 +11,16 @@
 </head>
 <body>
     <header></header>
-    <a id="link_fotos" href="https://forms.gle/K8NPCnFXG3DMvMHF6" target="blank">
-        <img class="upload_img" src="./assets/upload.gif" alt="">
-        Queremos crear un álbum lleno de recuerdos y tú puedes ser nuestro cómplice. Comparte tus fotos de la fiesta usando este enlace
+    <a id="link_fotos" href="" target="blank">
+    <img class="upload_img" src="./assets/upload.gif" alt="icono de upload">
+        Queremos crear un álbum lleno de recuerdos y tú puedes ser nuestro cómplice. Comparte tus fotos de la fiesta haciendo clic en este enlace
+        el día de la boda a partir de las 9:00pm
      </a>
     <main>
-        <img class="main__fixedImage main__fixedImage__left" src="./assets/rama_de_flores_left.png" alt="rama de flores">
-        <img class="main__fixedImage main__fixedImage__right" src="./assets/rama_de_flores_right.png" alt="rama de flores">
+        <div id="contenedor__main__fixedImages">
+            <img class="main__fixedImage main__fixedImage__left" src="./assets/rama_de_flores_left.png" alt="rama de flores">
+            <img class="main__fixedImage main__fixedImage__right" src="./assets/rama_de_flores_right.png" alt="rama de flores">
+        </div>
         <section class="seccion presentacion">
             <img class="presentacion__logoNovios" src="./assets/logo-rosa-palo-D7AFA8.png" alt="logo de las iniciales de los novios entrelazadas con un corazon">
             <h1 class="presentacion__nombresNovios">Lilibeth y Paul</h1>
@@ -25,7 +28,8 @@
                 <source src="./assets/la-boda.mp3" type="audio/mpeg">
                 Tu navegador no soporta este componente de audio.
             </audio>
-            <img class="presentacion__imagenPrincipal" src="./assets/foto__principal.webp" alt="novios caminando por la playa">
+            <span class="presentacion__reproductorDeAudio__textoReproductor">Play para escuchar nuestra canción</span>
+            <img class="presentacion__imagenPrincipal" src="./assets/9G1A1622.jpg" alt="novios caminando por la playa">
         </section>
         <section class="seccion detalles">
             <div class="detalles__citaBiblica">
@@ -38,12 +42,12 @@
             <h2>Con la bendición de nuestros padres</h2>
             <div class="detalles__bendicion">
                 <div class="detalles__bendicion__padresNovia">
-                    <span class="detalles__bendicion__novia">Lilibeth</span>
+                    <span class="detalles__bendicion__novia">Novia</span>
                     <span>Alfredo Rodríguez Noriega</span>
                     <span>Celia Campillo de Rodríguez</span>
                 </div>
                 <div class="detalles__bendicion__padresNovio">
-                    <span class="detalles__bendicion__novio">Paul</span>
+                    <span class="detalles__bendicion__novio">Novio</span>
                     <span>Paul Donado Torres</span>
                     <span>Rosa Fontalvo de Donado<img class="detalles__bendicion__cruzPostuma" src="./assets/cruz.svg" alt="cruz postuma"></span>
                 </div>
@@ -77,22 +81,25 @@
             <div class="detalles__slider">
                 <img id="detalles__slider__flechaRetroceder" class="detalles__slider__flecha" src="./assets/flecha_retroceder.svg" alt="flecha de retroceso de imagenes">
                 <img id="detalles__slider__flechaAvanzar" class="detalles__slider__flecha" src="./assets/flecha_retroceder.svg" alt="flecha de avance de imagenes de imagenes">
-                <img id="detalles__slider__foto" class="detalles__slider__foto" src="./assets/foto3.webp" alt="fotos variadas de novios">
+                <img id="detalles__slider__foto" class="detalles__slider__foto" src="./assets/9G1A1622.jpg" alt="fotos variadas de novios">
             </div>
         </section>
-        <section class="seccion informacion">
+        <section class="seccion_informacion">
+            <span id="informacion__mensaje__tituloTarjeta"></span>
+            <span id="informacion__tituloTarjeta"></span>
             <div id="informacion__momentos" class="informacion__momentos">
+                
                 <div class="informacion__momentos__frase"><span>Nuestra celebración inicia con la Sagrada Eucaristía a la que esperamos que también nos acompañes</span></div>
                 <div class="informacion__momentos__ceremonia">
                     <img class="informacion__iconoImagen" src="./assets/iglesia.svg" alt="iglesia">
                     <h2>Ceremonia</h2>
                     <span>7:00pm</span>
-                    <span class="informacion__momentos__lugar">Catedral Maria Reina<br>Barranquilla</span>
+                    <span class="informacion__momentos__lugar">Capilla de la Catedral María Reina<br>Barranquilla</span>
                     <a href="https://maps.app.goo.gl/Cw2vB432xTBCbWi87" class="informacion__momentos__verUbicacion" target="_blank">Ver ubicación</a>
                 </div>
                 <div class="informacion__momentos__celebracion">
                     <img class="informacion__iconoImagen" src="./assets/copas.svg" alt="copas de brindis">
-                    <h2>Celebración</h2>
+                    <h2>Fiesta</h2>
                     <span>9:00pm</span>
                     <span class="informacion__momentos__lugar">Salón de Eventos Dayder<br>Calle 76 # 44 - 45</span>
                     <a href="https://maps.app.goo.gl/KorYaWTijcLFyKWE8" class="informacion__momentos__verUbicacion" target="_blank">Ver ubicación</a>
@@ -108,22 +115,21 @@
                 <div class="informacion_vestimenta_ideas">
                     <div class="informacion_vestimenta_ellas">
                         <!-- <span>Ellas</span> -->
-                        <a href="https://es.pinterest.com/senorysenoraDonado/ellas/">Ver ideas<img src="./assets/vestimenta_mujer.jpg" alt=""></a>
+                        <a href="https://es.pinterest.com/senorysenoraDonado/ellas/" target="_blank">Ver ideas<img src="./assets/vestimenta_mujer.jpg" alt=""></a>
                     </div>
                     <div class="informacion_vestimenta_ellos">
                         <!-- <span>Ellos</span> -->
-                        <a href="https://es.pinterest.com/senorysenoraDonado/ellos/">Ver ideas <img src="./assets/vestimenta_hombre.jpg" alt=""></a>
+                        <a href="https://es.pinterest.com/senorysenoraDonado/ellos/" target="_blank">Ver ideas <img src="./assets/vestimenta_hombre.jpg" alt="icono vestido formal de hombres"></a>
                     </div>
                 </div>
                 
             </div>
             <h2>Confirma tu asistencia</h2>
-            <span id="texto_confirmacion">¡Nos encantaría contar con tu presencia! Por favor, confirma tu asistencia para nuestra boda antes del 22 de febrero. 
-                Esto nos ayudará a organizar todo con mucho cariño para ti.</span>
+            <span id="texto_confirmacion">¡Nos encantaría contar con tu presencia! Por favor, confirma tu asistencia a nuestra boda antes del <b>22 de febrero</b>. 
+                </span>
             <button id="confirmButtom">Confirmar</button>
             <div id="informacion__asistencia" class="informacion__asistencia">
                 <span id="informacion__asistencia__preparacion">
-                    Hemos preparado todo para que nuestra boda sea inolvidable y estás invitado a celebrar con nosotros.
                     Por favor marca la casilla correspondiente a cada invitado para confirmar su asistencia
                 </span>
                 <form id="myForm" class="informacion__asistencia__formulario" action="./confirmar.php" method="POST">
@@ -135,8 +141,8 @@
                 <input type="tel" name="telefono" id="telefono" required placeholder="Teléfono">
                 <textarea id="Mensaje" maxlength="300" cols="6" name="mensaje" required placeholder="Mensaje para los novios"></textarea>
                 <div id="formulario_botones">
-                    <input type="submit" id="submit" value="Enviar confirmación">
                     <button id="cancelarEnvio">Cancelar</button>
+                    <input type="submit" id="submit" value="Enviar confirmación">
                 </div>
                 </form>
             </div>

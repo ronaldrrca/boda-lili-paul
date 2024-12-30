@@ -1,8 +1,9 @@
-//Variables del slider de imágenes
-let foto_slider = ['foto2.webp', 'foto3.webp', 'foto4.webp', 'foto5.webp', 'foto6.webp'];
-let indice_actual = 2;
+// Variables del slider de imágenes
+let foto_slider = ['9G1A1595_1.jpg', '9G1A1597_1.jpg', '9G1A1607_1.jpg', '9G1A1651_1.jpg', '9G1A1659_1.jpg', '9G1A1671_1.jpg'];
+let indice_actual = 0;
+
 let detalles__slider__flechaAvanzar = document.getElementById('detalles__slider__flechaAvanzar');
-let detalles__slider__flechaRetroceder = document.getElementById('detalles__slider__flechaRetroceder'); 
+let detalles__slider__flechaRetroceder = document.getElementById('detalles__slider__flechaRetroceder');
 
 // Variables de la cuenta regresiva
 let detalles__cuentaRegresiva__dias = document.getElementById("detalles__cuentaRegresiva__dias");
@@ -14,32 +15,27 @@ const fechaBoda = new Date(2025, 2, 15, 19, 0, 0);// Fecha de la boda
 
 //________________Código del slider de imágenes______________________________________________________________
 
-//Paso automático de las imágenes
-setInterval(function() {
-    while (indice_actual == 5) {
-            indice_actual = 0   
-    }
+// Función para actualizar la imagen
+function actualizarImagen() {
     document.getElementById('detalles__slider__foto').setAttribute('src', `./assets/${foto_slider[indice_actual]}`);
-    indice_actual++;
-}, 5000)
+}
 
+// Paso automático de las imágenes
+setInterval(() => {
+    indice_actual = (indice_actual + 1) % foto_slider.length; // Avanza y vuelve al inicio si llega al final
+    actualizarImagen();
+}, 5000);
 
-//Paso de las imágenes con las flechas de desplazamiento
-detalles__slider__flechaAvanzar.addEventListener('click', function(){
-    while (indice_actual == 5) {
-        indice_actual = 0   
-    }
-    document.getElementById('detalles__slider__foto').setAttribute('src', `./assets/${foto_slider[indice_actual]}`);
-    indice_actual++;
-})
+// Paso de las imágenes con las flechas de desplazamiento
+detalles__slider__flechaAvanzar.addEventListener('click', () => {
+    indice_actual = (indice_actual + 1) % foto_slider.length;
+    actualizarImagen();
+});
 
-detalles__slider__flechaRetroceder.addEventListener('click', ()=>{
-    while (indice_actual == -1) {
-        indice_actual = 4;
-    } 
-    document.getElementById('detalles__slider__foto').setAttribute('src', `./assets/${foto_slider[indice_actual]}`);
-    indice_actual--;
-})
+detalles__slider__flechaRetroceder.addEventListener('click', () => {
+    indice_actual = (indice_actual - 1 + foto_slider.length) % foto_slider.length; // Retrocede y vuelve al final si está en el inicio
+    actualizarImagen();
+});
 
 
 //________________Código de la cuenta regresiva______________________________________________________________
@@ -78,16 +74,17 @@ setInterval(function() {
 
 //________________Código link para fotos______________________________________________________________
 
-// Fecha y hora específica en formato 'AAAA-MM-DDTHH:mm:ss
-const targetDate = new Date('2025-03-15T21:00:00');
-
-// Función para verificar si es hora de mostrar el elemento
+// Función para verificar si es hora de activar el link para la carga de imágenes
 function checkDate() {
+    // Fecha y hora específica en formato 'AAAA-MM-DDTHH:mm:ss
+    const targetDate = new Date('2024-12-28T16:00:00');
     const now = new Date();//Fecha y hora actual
     const element = document.getElementById("link_fotos");
-
+    console.log(targetDate);
+    
+    
     if (now >= targetDate) {
-        element.style.display = "inline-flex";
+        element.setAttribute("href", "https://forms.gle/K8NPCnFXG3DMvMHF6");
 
         //Ajustar el tamaño del footer al mostrar el link fijo para subir las fotos
         function adjustFooterMargin() {
@@ -107,7 +104,7 @@ function checkDate() {
 }
 
 //Descomentar este setInterval y ocultar el elemento cuando se haya definido el formato del elemento para que se ejecute en su momento la función checkDate
-setInterval(checkDate, 1000); //Ejecutar la función cuando la fecha indicada se cumpla 
+setInterval(checkDate, 10000); //Ejecutar la función cuando la fecha indicada se cumpla 
 
 
 

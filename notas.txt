@@ -1,4 +1,22 @@
-- Necesito que salgan los nombres de los invitados que confirman asistencia en el cuadro de confirmación
+DONE - Cambiar la foto principal
+DONE - Suavizar el verde del contador
+DONE - Suavizar el rosado del fondo de los nombres de los invitados
+DONE - Colocar el título de la tarjeta debajo del slider de imágenes y Hemos preparado todo para que nuestra boda sea inolvidable y estás invitado a celebrar con nosotros.
+DONE - Desactivar la confirmación el 22 de febrero
+DONE - Cambiar el titulo del formulario de imágenes: Boda Donado Rodríguez 
+DONE- Link de fotos cambiar por jodedera de Lilita, que esté siempre visible, pero que se habilite solo en la fecha y hora indicada
+DONE - Chequear las tildes de los nombres
+DONE - Ajustar el texto al tamaño del formualrio - Por favor marca la casilla correspondiente a cada invitado para confirmar su asistencia
+DONE - Fecha límite en negrita
+DONE - Foto principal rasgada 
+DONE - Borde sombreado a las fotos
+DONE - Ver como identificar quién sibió cada imagen al Drive
+DONE - Revisar el mensaje de token inválido
+DONE - En las vistas de celular y tablet, no se ven los botones del formulario de confirmación porque los tapa el link de fotos
+- Cambiar las imágenes del código de vestimenta
+- vestido largo y guayabera*****
+DONE - Play para escuchar nuestra canción "No me cuadra poner letras en ese espacio"
+DONE - Página privada para lista de invitados
 
 
 tokens:

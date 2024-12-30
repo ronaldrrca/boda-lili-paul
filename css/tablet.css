@@ -7,7 +7,7 @@ main{
 }
 
 .main__fixedImage__right{
-    top: 34rem;
+    bottom: 6rem;
 }
 
 .presentacion__logoNovios{
@@ -102,5 +102,22 @@ main{
 }
 
 #informacion__asistencia__preparacion{
-    max-width: 65rem;
+    max-width: 50rem;
+}
+
+#tabla_confirmados .confirmadosTelefono, #tabla_confirmados .thTelefono{
+    display: table-cell;
+}
+
+#main_confirmaciones{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.nombreInvitado{
+    margin-right: 5rem;
+}
+
+#asistencia__datos{
+    padding-right: 5rem;
 }

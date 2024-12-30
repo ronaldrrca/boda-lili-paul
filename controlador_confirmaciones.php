@@ -3,10 +3,23 @@
 // Leer el archivo JSON de invitados
 $json = file_get_contents('./invitados.json');
 $invitados = json_decode($json, true);
+$resultados = [];
 
-// Filtrar elementos con "confirmado = true"
-$confirmados = array_filter($invitados, function ($item) {
-    return isset($item['confirmado']) && $item['confirmado'] === true;
-});
+// Filtrar invitados confirmados
+foreach ($invitados as $invitacion) {
+    $invitadosValidos = array_filter($invitacion['invitados'], function($invitado) {
+        return $invitado['confirmacion'] === true;
+    });
+
+    if (!empty($invitadosValidos)) {
+        $resultados[] = [
+            'invitados' => $invitadosValidos,
+            'telefono' => $invitacion['telefono'],
+            'fecha_confirmacion' => $invitacion['fecha_confirmacion'],
+            'mensaje' => $invitacion['mensaje'],
+        ];
+    }
+}
+
 
 ?>

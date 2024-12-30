@@ -56,11 +56,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 foreach ($invitadoEncontrado['invitados'] as &$invitado) {
     if (in_array($invitado['id'], $identificadorInvitado)) {
-        echo "<pre>";
-        echo "ID: " . $invitado['id'] . "\n";
-        echo "Nombre: " . $invitado['nombre'] . "\n";
-        echo "Asistencia: " . $invitado['asistencia'] . "\n";
-        echo "</pre>";
+        // echo "<pre>";
+        // echo "ID: " . $invitado['id'] . "\n";
+        // echo "Nombre: " . $invitado['nombre'] . "\n";
+        // echo "Asistencia: " . $invitado['asistencia'] . "\n";
+        // echo "</pre>";
        
         $invitado['confirmacion'] = true;
         // echo "asistencia[0]" . $asistencia[0];
