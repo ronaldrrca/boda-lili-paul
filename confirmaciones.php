@@ -17,7 +17,12 @@ include './controlador_confirmaciones.php';
 <body>
     <main id="main_confirmaciones">
         <h1>Invitados confirmados</h1>
-        <table id="tabla_confirmados">
+        
+        <div id="estadisticasAsistencia">
+            <span>Confirmaciones: <?php echo count($resultados); ?></span> 
+            <span>Asistencias: <?php echo $invitadosAsistentes; ?></span>
+            <span>Inasistencias: <?php echo $invitadosAsistentes; ?></span>
+            <table id="tabla_confirmados">
             <thead>
                 <tr>
                     <th></th>
@@ -74,9 +79,14 @@ include './controlador_confirmaciones.php';
                         </tr>
                     <?php }
                     $grupoNumero++; // Incrementar el número de grupo para el siguiente grupo
+                    
                 } ?>
             </tbody>
-        </table>
+            
+        </table>        
+        </div>
+            
+        
     </main>
 </body>
 </html>

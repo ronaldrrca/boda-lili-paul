@@ -80,7 +80,6 @@ function checkDate() {
     const targetDate = new Date('2024-12-28T16:00:00');
     const now = new Date();//Fecha y hora actual
     const element = document.getElementById("link_fotos");
-    console.log(targetDate);
     
     
     if (now >= targetDate) {

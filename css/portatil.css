@@ -97,6 +97,9 @@ main{
     font-size: 1.5;
 }
 
+#tabla_confirmados{
+    max-height: 60rem;  /* Definir la altura máxima de la tabla */
+}
 
 
 

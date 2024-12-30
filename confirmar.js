@@ -34,11 +34,10 @@ fetch(invitados)
     let fechaLimiteConfirmacion = new Date("Sat Feb 22 2025 23:59:59 GMT-0500"); 
     let fechaActual = new Date();
 
-   
     if (infoInvitado) {
       informacion__mensaje__tituloTarjeta.innerHTML = "Hemos preparado todo para que nuestra boda sea inolvidable y estás invitado a celebrar con nosotros.";
       informacion__tituloTarjeta.innerHTML = infoInvitado.nombreInvitacion;
-    }else{
+    } else {
       informacion__mensaje__tituloTarjeta.style.marginBottom = 0;
       informacion__mensaje__tituloTarjeta.innerHTML = "Nos complace participarte de nuestra boda.";
     }
@@ -53,75 +52,73 @@ fetch(invitados)
         throw new Error(`El token "${token}" no existe.`);
       }
 
-      // Filtrar los invitados que tienen confirmación === false
-      let invitadosConfirmados = infoInvitado.invitados.filter(invitado => invitado.confirmacion === false);
-
-      if (invitadosConfirmados.length === 0) {
+      // Validar si la invitación ya ha sido confirmada
+      if (infoInvitado.confirmacion) {
         document.getElementById("informacion__contenedor__agradecimiento").style.display = "flex";
-        document.getElementById("informacion__asistencia__respuesta").innerHTML = "Ya habías confirmado";
-      } else if (invitadosConfirmados.length > 0) {
+        document.getElementById("informacion__asistencia__respuesta").innerHTML = "Ya habías confirmado.";
+        return;
+      }
 
-        // Controlar la fecha de confirmación a la fiesta
-    if (fechaActual.getTime() > fechaLimiteConfirmacion.getTime()) {
-      document.getElementById("informacion__contenedor__agradecimiento").style.display = "flex";
-      document.getElementById("informacion__asistencia__respuesta").innerHTML = 
-      "La fecha límite para confirmar tu asistencia a la fiesta era el 22 de febrero. Lamentamos no poder reservar un espacio para ti, pero si lo deseas puedes acompañarnos en la ceremonia religiosa.";
-    }
+      // Controlar la fecha de confirmación a la fiesta
+      if (fechaActual.getTime() > fechaLimiteConfirmacion.getTime()) {
+        document.getElementById("informacion__contenedor__agradecimiento").style.display = "flex";
+        document.getElementById("informacion__asistencia__respuesta").innerHTML = 
+        "La fecha límite para confirmar tu asistencia a la fiesta era el 22 de febrero. Lamentamos no poder reservar un espacio para ti, pero si lo deseas puedes acompañarnos en la ceremonia religiosa.";
+        return;
+      }
 
-    const link_fotos = document.getElementById("link_fotos");
-    link_fotos.style.display = "none";
+      const link_fotos = document.getElementById("link_fotos");
+      link_fotos.style.display = "none";
 
-        // Mostrar los invitados
-          invitadosConfirmados.forEach((element, index) => {
-          let asistencia__datos = document.getElementById("asistencia__datos");
-          const invitado = document.createElement("div");
-          invitado.setAttribute("id", `invitado_${index + 1}`);
-          invitado.innerHTML = `${index + 1}. &nbsp;`;
-          invitado.classList.add(`invitados`);
-          const asistencia = document.createElement("input");
-          asistencia.classList.add("asistencia");
-          asistencia.setAttribute("id", `asistencia_${index + 1}`)
-          asistencia.setAttribute("name", "asistencia[]");
-          asistencia.value = "no";
-          asistencia.type = "hidden";
-          const checkInvitado = document.createElement("input");
-          checkInvitado.type = "checkbox";
-          checkInvitado.setAttribute("id", `checkInvitado_${index + 1}`)
-          checkInvitado.setAttribute("data-id", index + 1)
-          checkInvitado.value = "si";
-          checkInvitado.setAttribute("name", "asistencia[]")
+      // Mostrar los invitados
+      infoInvitado.invitados.forEach((element, index) => {
+        let asistencia__datos = document.getElementById("asistencia__datos");
+        const invitado = document.createElement("div");
+        invitado.setAttribute("id", `invitado_${index + 1}`);
+        invitado.innerHTML = `${index + 1}.&nbsp;`;
+        invitado.classList.add(`invitados`);
+        const asistencia = document.createElement("input");
+        asistencia.classList.add("asistencia");
+        asistencia.setAttribute("id", `asistencia_${index + 1}`);
+        asistencia.setAttribute("name", "asistencia[]");
+        asistencia.value = "no";
+        asistencia.type = "hidden";
+        const checkInvitado = document.createElement("input");
+        checkInvitado.type = "checkbox";
+        checkInvitado.setAttribute("id", `checkInvitado_${index + 1}`);
+        checkInvitado.setAttribute("data-id", index + 1);
+        checkInvitado.value = "si";
+        checkInvitado.setAttribute("name", "asistencia[]");
 
-          
-          const nombreInvitado = document.createElement("input");
-          nombreInvitado.classList.add("nombreInvitado");
-          nombreInvitado.setAttribute("name", "nombresInvitados[]");
-          nombreInvitado.setAttribute("readonly", true);
-          nombreInvitado.setAttribute("data-id", index + 1)
-          const identificadorInvitado = document.createElement("input");
-          identificadorInvitado.setAttribute("name", "identificadorInvitado[]")
-          identificadorInvitado.value = `${element.id}`
-          identificadorInvitado.type = "hidden";
+        const nombreInvitado = document.createElement("input");
+        nombreInvitado.classList.add("nombreInvitado");
+        nombreInvitado.setAttribute("name", "nombresInvitados[]");
+        nombreInvitado.setAttribute("readonly", true);
+        nombreInvitado.setAttribute("data-id", index + 1);
+        const identificadorInvitado = document.createElement("input");
+        identificadorInvitado.setAttribute("name", "identificadorInvitado[]");
+        identificadorInvitado.value = `${element.id}`;
+        identificadorInvitado.type = "hidden";
 
-          asistencia__datos.appendChild(invitado);
-          invitado.appendChild(nombreInvitado);
-          invitado.appendChild(asistencia);
-          invitado.appendChild(checkInvitado);
-          invitado.appendChild(identificadorInvitado);
-          nombreInvitado.value = `${element.nombre}`;
+        asistencia__datos.appendChild(invitado);
+        invitado.appendChild(nombreInvitado);
+        invitado.appendChild(asistencia);
+        invitado.appendChild(checkInvitado);
+        invitado.appendChild(identificadorInvitado);
+        nombreInvitado.value = `${element.nombre}`;
 
-          //Controlar que solo se envíe el valor "no" cuando el checkbox no está marcado
+        // Controlar que solo se envíe el valor "no" cuando el checkbox no está marcado
         function verificarCheckInvitado(event) {
-            let check = event.target; // El checkbox que disparó el evento
-            check.checked ? asistencia.disabled = true : asistencia.disabled = false;
+          let check = event.target; // El checkbox que disparó el evento
+          check.checked ? asistencia.disabled = true : asistencia.disabled = false;
         }
 
-    // Asignar el evento change al checkbox
-    checkInvitado.addEventListener("change", verificarCheckInvitado);
-           
-  });
-        document.getElementById("informacion__asistencia").style.display = "flex";
-        document.body.style.overflow = 'hidden';
-      }
+        // Asignar el evento change al checkbox
+        checkInvitado.addEventListener("change", verificarCheckInvitado);
+      });
+
+      document.getElementById("informacion__asistencia").style.display = "flex";
+      document.body.style.overflow = 'hidden';
     });
   })
   .catch(error => {
@@ -144,7 +141,7 @@ fetch(invitados)
 
    // Establecer el valor del campo oculto
    document.getElementById('timestamp').value = formattedTimestamp;
-  // console.log(formattedTimestamp);
+  
 
 
 

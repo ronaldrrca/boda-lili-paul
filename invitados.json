@@ -6,19 +6,18 @@
             {
                 "id": 1,
                 "nombre": "ALFREDO RODRÍGUEZ NORIEGA",
-                "confirmacion": false,
-                "asistencia": false
+                "asistencia": "si"
             },
             {
                 "id": 2,
                 "nombre": "CELIA CAMPILLO DE RODRÍGUEZ",
-                "confirmacion": false,
-                "asistencia": false
+                "asistencia": "no"
             }
         ],
-        "fecha_confirmacion": "",
-        "telefono": "",
-        "mensaje": ""
+        "confirmacion": true,
+        "fecha_confirmacion": "30/12/2024 15:25:06",
+        "telefono": "3003581311",
+        "mensaje": "qrqwrqwreqwrw"
     },
     {
         "token": "7xniEVJvMe",
@@ -27,10 +26,10 @@
             {
                 "id": 1,
                 "nombre": "YUDY RODRÍGUEZ CAMPILLO",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -42,10 +41,10 @@
             {
                 "id": 1,
                 "nombre": "LADY MORRIS RODRÍGUEZ",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -57,10 +56,10 @@
             {
                 "id": 1,
                 "nombre": "CAROLINA MORRIS RODRÍGUEZ",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -72,10 +71,10 @@
             {
                 "id": 1,
                 "nombre": "FERNANDO LLANO PEREGRINO",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -87,16 +86,15 @@
             {
                 "id": 1,
                 "nombre": "DIEGO ROYERO LÓPEZ",
-                "confirmacion": true,
                 "asistencia": "no"
             },
             {
                 "id": 2,
                 "nombre": "BRIGITTE MORRIS RODRÍGUEZ",
-                "confirmacion": true,
                 "asistencia": "si"
             }
         ],
+        "confirmacion": true,
         "fecha_confirmacion": "29/12/2024 08:25:25",
         "telefono": "3003581311",
         "mensaje": "Esperamos que esta unión sea para siempre y que tengan un montón de hijos para poder ser un mejor tío"
@@ -108,28 +106,25 @@
             {
                 "id": 1,
                 "nombre": "CARLOS RODRÍGUEZ CAMPILLO",
-                "confirmacion": true,
                 "asistencia": "si"
             },
             {
                 "id": 2,
                 "nombre": "DESIREE FLÓREZ",
-                "confirmacion": true,
                 "asistencia": "si"
             },
             {
                 "id": 3,
                 "nombre": "MARIANGEL RODRÍGUEZ FLÓREZ",
-                "confirmacion": true,
                 "asistencia": "no"
             },
             {
                 "id": 4,
                 "nombre": "SANTIAGO RODRÍGUEZ FLÓREZ",
-                "confirmacion": true,
                 "asistencia": "no"
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "29/12/2024 08:25:25",
         "telefono": "3007428335",
         "mensaje": "iuybpfa iauhiu aiu aeiuhai u aub cialu iua fauifiuhf9ua ub i"
@@ -141,16 +136,15 @@
             {
                 "id": 1,
                 "nombre": "RONALD RODRÍGUEZ CAMPILLO",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "MARIANNA GARCÍA CLARO",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -162,19 +156,18 @@
             {
                 "id": 1,
                 "nombre": "CARMEN CAMPILLO PULGAR",
-                "confirmacion": false,
-                "asistencia": false
+                "asistencia": "si"
             },
             {
                 "id": 2,
                 "nombre": "ELEANA ORTIZ CAMPILLO",
-                "confirmacion": false,
-                "asistencia": false
+                "asistencia": "si"
             }
         ],
-        "fecha_confirmacion": "",
-        "telefono": "",
-        "mensaje": ""
+        "confirmacion": true,
+        "fecha_confirmacion": "30/12/2024 16:53:45",
+        "telefono": "3003581311",
+        "mensaje": "qwtqwtqtr"
     },
     {
         "token": "J9sBtuFCrd",
@@ -183,16 +176,15 @@
             {
                 "id": 1,
                 "nombre": "WILSON CAMPILLO PULGAR",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "JANETH MEDINA MARTÍNEZ",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -204,16 +196,15 @@
             {
                 "id": 1,
                 "nombre": "CÉSAR PÁEZ",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "ILIANA CAMPILLO QUIROZ",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -225,25 +216,23 @@
             {
                 "id": 1,
                 "nombre": "WALBERTO CAMPILLO PULGAR",
-                "confirmacion": false,
-                "asistencia": false
+                "asistencia": "si"
             },
             {
                 "id": 2,
                 "nombre": "ANA QUIROZ CUELLO",
-                "confirmacion": false,
-                "asistencia": false
+                "asistencia": "si"
             },
             {
                 "id": 3,
                 "nombre": "NERELCY QUIROZ YEPES",
-                "confirmacion": false,
-                "asistencia": false
+                "asistencia": "si"
             }
         ],
-        "fecha_confirmacion": "",
-        "telefono": "",
-        "mensaje": ""
+        "confirmacion": true,
+        "fecha_confirmacion": "30/12/2024 16:54:12",
+        "telefono": "3003581311",
+        "mensaje": "qreqeryqr"
     },
     {
         "token": "oC6ycaJ4tV",
@@ -252,16 +241,15 @@
             {
                 "id": 1,
                 "nombre": "NICOLAS ROUX",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "LAURA ORTIZ CAMPILLO",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -273,10 +261,10 @@
             {
                 "id": 1,
                 "nombre": "CELINA ZAMBRANO",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -288,16 +276,15 @@
             {
                 "id": 1,
                 "nombre": "YUSED RAMÍREZ COLL",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "MARYORIS COLL ESCORCIA",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -309,16 +296,15 @@
             {
                 "id": 1,
                 "nombre": "KURT LENGEMANN ZAMBRANO",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "KAREN TOSCANO GONZÁLEZ",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -330,16 +316,15 @@
             {
                 "id": 1,
                 "nombre": "JAVIER MEZA OROZCO",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "ZULEIMA RUEDA MUSALAN",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -351,16 +336,15 @@
             {
                 "id": 1,
                 "nombre": "ÁLVARO FUENTES",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "MAYRA PADILLA",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -372,16 +356,15 @@
             {
                 "id": 1,
                 "nombre": "YEINER FONTALVO MARTÍNEZ",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "VIVIANA OROZCO CERVANTES",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -393,16 +376,15 @@
             {
                 "id": 1,
                 "nombre": "JOHN DEANTONIO RODRÍGUEZ",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "KAREEN SIMANCAS BELTRÁN",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -414,22 +396,20 @@
             {
                 "id": 1,
                 "nombre": "PAUL DONADO TORRES",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "MONICA DONADO FONTALVO",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 3,
                 "nombre": "ELENA SOLANO TORRES",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -441,16 +421,15 @@
             {
                 "id": 1,
                 "nombre": "MILAGRO DONADO FONTALVO",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -462,28 +441,25 @@
             {
                 "id": 1,
                 "nombre": "CHRISTOPHER WILHITE",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "JENNIFER DONADO FONTALVO",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 3,
                 "nombre": "DAKOTA WILHITE DONADO",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 4,
                 "nombre": "LUCAS WILHITE DONADO",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -495,10 +471,10 @@
             {
                 "id": 1,
                 "nombre": "LESVIA FONTALVO GÓMEZ",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -510,10 +486,10 @@
             {
                 "id": 1,
                 "nombre": "FREDDIE FONTALVO GÓMEZ",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -525,10 +501,10 @@
             {
                 "id": 1,
                 "nombre": "ALSERGIO FONTALVO GÓMEZ",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -540,16 +516,15 @@
             {
                 "id": 1,
                 "nombre": "JAIRO FONTALVO GÓMEZ",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "INES TORO",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -561,10 +536,10 @@
             {
                 "id": 1,
                 "nombre": "LUIS MANGA FONTALVO",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -576,10 +551,10 @@
             {
                 "id": 1,
                 "nombre": "GUSTAVO MANGA FONTALVO",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -591,10 +566,10 @@
             {
                 "id": 1,
                 "nombre": "JORGE MANGA FONTALVO",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -606,37 +581,33 @@
             {
                 "id": 1,
                 "nombre": "ROGER MANGA",
-                "confirmacion": false,
-                "asistencia": false
+                "asistencia": "si"
             },
             {
                 "id": 2,
                 "nombre": "ESTHER FIGUEROA",
-                "confirmacion": false,
-                "asistencia": false
+                "asistencia": "si"
             },
             {
                 "id": 3,
                 "nombre": "SEBASTIÁN MANGA",
-                "confirmacion": false,
-                "asistencia": false
+                "asistencia": "si"
             },
             {
                 "id": 4,
                 "nombre": "ALEJANDRA MANGA",
-                "confirmacion": false,
-                "asistencia": false
+                "asistencia": "si"
             },
             {
                 "id": 5,
                 "nombre": "CAMILA MANGA",
-                "confirmacion": false,
-                "asistencia": false
+                "asistencia": "no"
             }
         ],
-        "fecha_confirmacion": "",
-        "telefono": "",
-        "mensaje": ""
+        "confirmacion": true,
+        "fecha_confirmacion": "30/12/2024 16:44:39",
+        "telefono": "3003581311",
+        "mensaje": "dfasfa"
     },
     {
         "token": "MqcbgUhr9i",
@@ -645,16 +616,15 @@
             {
                 "id": 1,
                 "nombre": "MARÍA TERESA PEÑA MARRIAGA",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "ISABELLA MANGA PEÑA",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -666,28 +636,25 @@
             {
                 "id": 1,
                 "nombre": "GLENDA VÁSQUEZ GUTIERREZ",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "SANTIAGO MANGA VÁSQUEZ",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 3,
                 "nombre": "ESTEBAN MANGA VÁSQUEZ",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 4,
                 "nombre": "GABRIELA MANGA VÁSQUEZ",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "20/12/2024 16:53:18",
         "telefono": "3003581311",
         "mensaje": "p"
@@ -699,16 +666,15 @@
             {
                 "id": 1,
                 "nombre": "WALTER FONTALVO TORO",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "PAOLA ANAYA VILORIA",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -720,10 +686,10 @@
             {
                 "id": 1,
                 "nombre": "MELBA ECHEVERRÍA",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -735,10 +701,10 @@
             {
                 "id": 1,
                 "nombre": "DELIA FONTALVO ECHEVERRÍA",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -750,22 +716,20 @@
             {
                 "id": 1,
                 "nombre": "GINETH GÓMEZ BORREGO",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "LIGIA FONTALVO OJITO",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 3,
                 "nombre": "KENNETH GÓMEZ FONTALVO",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -777,16 +741,10 @@
             {
                 "id": 1,
                 "nombre": "RACHELL GÓMEZ FONTALVO",
-                "confirmacion": false,
-                "asistencia": false
-            },
-            {
-                "id": 2,
-                "nombre": "",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -798,16 +756,15 @@
             {
                 "id": 1,
                 "nombre": "JAVIER CASTELL VARGAS",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "CAROLINA SALAMANCA FONTALVO",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -819,10 +776,10 @@
             {
                 "id": 1,
                 "nombre": "KAREN SALAMANCA FONTALVO",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -834,16 +791,15 @@
             {
                 "id": 1,
                 "nombre": "DANIEL GUZMÁN DURÁN",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "JAZMÍN FONTALVO FREITE",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -855,16 +811,15 @@
             {
                 "id": 1,
                 "nombre": "JOSÉ ESCORCIA PÉREZ",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "LUISA FONTALVO FREITE",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -876,16 +831,15 @@
             {
                 "id": 1,
                 "nombre": "DAIRO BARRAZA PACHECO",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "JOLIE MÚNERA LAURENS",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -897,16 +851,15 @@
             {
                 "id": 1,
                 "nombre": "JESÚS COHEN JIMÉNEZ",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "ROSY BARRIO LAURENS",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -918,16 +871,15 @@
             {
                 "id": 1,
                 "nombre": "YASER ROMERO HERNÁNDEZ",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "GREICY LEÓN CALDERON",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -939,16 +891,15 @@
             {
                 "id": 1,
                 "nombre": "DEIVIS ROMERO FLOREZ",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "LINDA CAMARGO MARRIAGA",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -960,16 +911,15 @@
             {
                 "id": 1,
                 "nombre": "LUIS SARMIENTO BLANCO",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "SHARILYN ROMERO FLÓREZ",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -981,16 +931,15 @@
             {
                 "id": 1,
                 "nombre": "EDGAR SANTIAGO CABRALES",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "BRENDA MORALES PADILLA",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -1002,10 +951,10 @@
             {
                 "id": 1,
                 "nombre": "MIGUEL FELIPE GÓMEZ RIVERA",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -1017,16 +966,15 @@
             {
                 "id": 1,
                 "nombre": "MIGUEL DAVID GÓMEZ RIVERA",
-                "confirmacion": false,
                 "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -1038,10 +986,10 @@
             {
                 "id": 1,
                 "nombre": "JENNY GARCÍA BORRERO",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
@@ -1053,10 +1001,10 @@
             {
                 "id": 1,
                 "nombre": "SRTA GABRIELA PACHECO",
-                "confirmacion": false,
                 "asistencia": false
             }
         ],
+        "confirmacion": false,
         "fecha_confirmacion": "",
         "telefono": "",
         "mensaje": ""
