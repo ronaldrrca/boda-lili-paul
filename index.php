@@ -29,7 +29,7 @@
                 Tu navegador no soporta este componente de audio.
             </audio>
             <span class="presentacion__reproductorDeAudio__textoReproductor">Play para escuchar nuestra canción</span>
-            <img class="presentacion__imagenPrincipal" src="./assets/9G1A1622.jpg" alt="novios caminando por la playa">
+            <img class="presentacion__imagenPrincipal" src="./assets/9G1A1622.webp" alt="novios caminando por la playa">
         </section>
         <section class="seccion detalles">
             <div class="detalles__citaBiblica">
@@ -81,7 +81,7 @@
             <div class="detalles__slider">
                 <img id="detalles__slider__flechaRetroceder" class="detalles__slider__flecha" src="./assets/flecha_retroceder.svg" alt="flecha de retroceso de imagenes">
                 <img id="detalles__slider__flechaAvanzar" class="detalles__slider__flecha" src="./assets/flecha_retroceder.svg" alt="flecha de avance de imagenes de imagenes">
-                <img id="detalles__slider__foto" class="detalles__slider__foto" src="./assets/9G1A1622.jpg" alt="fotos variadas de novios">
+                <img id="detalles__slider__foto" class="detalles__slider__foto" src="./assets/9G1A1671_1.webp" alt="fotos variadas de novios">
             </div>
         </section>
         <section class="seccion_informacion">
@@ -114,12 +114,12 @@
                 <h2>Código de vestimenta</h2>
                 <div class="informacion_vestimenta_ideas">
                     <div class="informacion_vestimenta_ellas">
-                        <!-- <span>Ellas</span> -->
-                        <a href="https://es.pinterest.com/senorysenoraDonado/ellas/" target="_blank">Ver ideas<img src="./assets/vestimenta_mujer.jpg" alt=""></a>
+                        <a href="https://es.pinterest.com/senorysenoraDonado/ellas/" target="_blank">Ver ideas<img src="./assets/vestimenta_mujer.png" alt=""></a>
+                        <span>Vestido largo</span>
                     </div>
                     <div class="informacion_vestimenta_ellos">
-                        <!-- <span>Ellos</span> -->
-                        <a href="https://es.pinterest.com/senorysenoraDonado/ellos/" target="_blank">Ver ideas <img src="./assets/vestimenta_hombre.jpg" alt="icono vestido formal de hombres"></a>
+                        <a href="https://es.pinterest.com/senorysenoraDonado/ellos/" target="_blank">Ver ideas <img src="./assets/vestimenta_hombre.png" alt="icono vestido formal de hombres"></a>
+                        <span>Guayabera</span>
                     </div>
                 </div>
                 

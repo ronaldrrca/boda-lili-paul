@@ -1,5 +1,5 @@
 // Variables del slider de imágenes
-let foto_slider = ['9G1A1595_1.jpg', '9G1A1597_1.jpg', '9G1A1607_1.jpg', '9G1A1651_1.jpg', '9G1A1659_1.jpg', '9G1A1671_1.jpg'];
+let foto_slider = ['9G1A1595_1.webp', '9G1A1597_1.webp', '9G1A1607_1.webp', '9G1A1651_1.webp', '9G1A1659_1.webp', '9G1A1671_1.webp'];
 let indice_actual = 0;
 
 let detalles__slider__flechaAvanzar = document.getElementById('detalles__slider__flechaAvanzar');
@@ -77,7 +77,7 @@ setInterval(function() {
 // Función para verificar si es hora de activar el link para la carga de imágenes
 function checkDate() {
     // Fecha y hora específica en formato 'AAAA-MM-DDTHH:mm:ss
-    const targetDate = new Date('2024-12-28T16:00:00');
+    const targetDate = new Date('2025-03-15T21:00:00');
     const now = new Date();//Fecha y hora actual
     const element = document.getElementById("link_fotos");
     

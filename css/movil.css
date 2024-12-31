@@ -568,6 +568,10 @@ h2{
     margin-bottom: 10rem;
 }
 
+.informacion__vestimenta img{
+    width: 5rem;
+}
+
 .informacion_vestimenta_ideas{
     display: flex;
     justify-content: center;
@@ -583,14 +587,16 @@ h2{
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    background-color: #EDE8E3;
+    background-color: #FFFFFF;
+    border: 2px solid #EDE8E3;
     color: #413F2F;
     text-decoration: none;
     border-radius: 10px;
+    margin-bottom: 1rem;
 }
 
 .informacion_vestimenta_ideas a img{
-    width: 15rem;
+    width: 10rem;
     margin-top: 1rem;
 }
 
@@ -613,6 +619,12 @@ h2{
     left: 0;
     /* padding-bottom: 10rem; */
     background-color: #FFFFFF;
+}
+
+.informacion_vestimenta_ideas span{
+    font-family: var(--fuente_titulos);
+    font-size: 1.8rem;
+    font-weight: 500;
 }
 
 #informacion__asistencia__preparacion{
@@ -664,7 +676,7 @@ h2{
     font-size: 1.4rem;
     gap: 1.5rem;
     font-family: var(--fuente_texto_general);
-    background-image: url("../assets/fondo_invitados.png");
+    background-image: url("../assets/fondo_invitados.webp");
     background-color: rgba(255, 230, 240, 0.4);
     border-radius: 5px 5px 0 0;
     background-position: left; 
@@ -747,7 +759,7 @@ textarea{
 #cancelarEnvio{
     width: 18.8rem;
     height: 4.2rem;
-    background-color: #FFC0CB;
+    background-color: #FFE4EC;
     font-family: var(--fuente_texto_general);
     font-size: 1.6rem;
     color: #333333;
@@ -878,6 +890,9 @@ th{
     color: #fff;
     font-size: 1.2rem;
     font-weight: bold;
+    position: sticky; /* Fijar el encabezado */
+    top: 0; /* Mantenerlo en la parte superior */
+    z-index: 1;
 }
 
 td{
@@ -891,9 +906,10 @@ table{
 #tabla_confirmados{
     width: auto;
     margin-top: 3rem;
-    max-height: 60rem;  /* Definir la altura máxima de la tabla */
+    max-height: 58rem;  /* Definir la altura máxima de la tabla */
     overflow-y: scroll;   /* La barra de desplazamiento aparecerá cuando el contenido sea más grande que el max-height */
     display: block;     /* Hace que la tabla sea un bloque para que se pueda aplicar el overflow */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #tabla_confirmados #confirmadosNombre, #tabla_confirmados .confirmadosMensaje{

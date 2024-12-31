@@ -6,18 +6,18 @@
             {
                 "id": 1,
                 "nombre": "ALFREDO RODRÍGUEZ NORIEGA",
-                "asistencia": "si"
+                "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "CELIA CAMPILLO DE RODRÍGUEZ",
-                "asistencia": "no"
+                "asistencia": false
             }
         ],
-        "confirmacion": true,
-        "fecha_confirmacion": "30/12/2024 15:25:06",
-        "telefono": "3003581311",
-        "mensaje": "qrqwrqwreqwrw"
+        "confirmacion": false,
+        "fecha_confirmacion": "",
+        "telefono": "",
+        "mensaje": ""
     },
     {
         "token": "7xniEVJvMe",
@@ -86,18 +86,18 @@
             {
                 "id": 1,
                 "nombre": "DIEGO ROYERO LÓPEZ",
-                "asistencia": "no"
+                "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "BRIGITTE MORRIS RODRÍGUEZ",
-                "asistencia": "si"
+                "asistencia": false
             }
         ],
-        "confirmacion": true,
-        "fecha_confirmacion": "29/12/2024 08:25:25",
-        "telefono": "3003581311",
-        "mensaje": "Esperamos que esta unión sea para siempre y que tengan un montón de hijos para poder ser un mejor tío"
+        "confirmacion": false,
+        "fecha_confirmacion": "",
+        "telefono": "",
+        "mensaje": ""
     },
     {
         "token": "Z1Pa0E6D8f",
@@ -156,18 +156,18 @@
             {
                 "id": 1,
                 "nombre": "CARMEN CAMPILLO PULGAR",
-                "asistencia": "si"
+                "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "ELEANA ORTIZ CAMPILLO",
-                "asistencia": "si"
+                "asistencia": false
             }
         ],
-        "confirmacion": true,
-        "fecha_confirmacion": "30/12/2024 16:53:45",
-        "telefono": "3003581311",
-        "mensaje": "qwtqwtqtr"
+        "confirmacion": false,
+        "fecha_confirmacion": "",
+        "telefono": "",
+        "mensaje": ""
     },
     {
         "token": "J9sBtuFCrd",
@@ -216,23 +216,23 @@
             {
                 "id": 1,
                 "nombre": "WALBERTO CAMPILLO PULGAR",
-                "asistencia": "si"
+                "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "ANA QUIROZ CUELLO",
-                "asistencia": "si"
+                "asistencia": false
             },
             {
                 "id": 3,
                 "nombre": "NERELCY QUIROZ YEPES",
-                "asistencia": "si"
+                "asistencia": false
             }
         ],
-        "confirmacion": true,
-        "fecha_confirmacion": "30/12/2024 16:54:12",
-        "telefono": "3003581311",
-        "mensaje": "qreqeryqr"
+        "confirmacion": false,
+        "fecha_confirmacion": "",
+        "telefono": "",
+        "mensaje": ""
     },
     {
         "token": "oC6ycaJ4tV",
@@ -581,33 +581,33 @@
             {
                 "id": 1,
                 "nombre": "ROGER MANGA",
-                "asistencia": "si"
+                "asistencia": false
             },
             {
                 "id": 2,
                 "nombre": "ESTHER FIGUEROA",
-                "asistencia": "si"
+                "asistencia": false
             },
             {
                 "id": 3,
                 "nombre": "SEBASTIÁN MANGA",
-                "asistencia": "si"
+                "asistencia": false
             },
             {
                 "id": 4,
                 "nombre": "ALEJANDRA MANGA",
-                "asistencia": "si"
+                "asistencia": false
             },
             {
                 "id": 5,
                 "nombre": "CAMILA MANGA",
-                "asistencia": "no"
+                "asistencia": false
             }
         ],
-        "confirmacion": true,
-        "fecha_confirmacion": "30/12/2024 16:44:39",
-        "telefono": "3003581311",
-        "mensaje": "dfasfa"
+        "confirmacion": false,
+        "fecha_confirmacion": "",
+        "telefono": "",
+        "mensaje": ""
     },
     {
         "token": "MqcbgUhr9i",

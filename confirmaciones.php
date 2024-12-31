@@ -21,7 +21,7 @@ include './controlador_confirmaciones.php';
         <div id="estadisticasAsistencia">
             <span>Confirmaciones: <?php echo count($resultados); ?></span> 
             <span>Asistencias: <?php echo $invitadosAsistentes; ?></span>
-            <span>Inasistencias: <?php echo $invitadosAsistentes; ?></span>
+            <span>Inasistencias: <?php echo $invitadosInasistentes; ?></span>
             <table id="tabla_confirmados">
             <thead>
                 <tr>
